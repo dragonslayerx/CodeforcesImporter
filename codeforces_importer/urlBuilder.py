@@ -1,4 +1,4 @@
-class UrlBuilder:
+class Urlbuilder:
 
     def _init__(self):
         self.base_url = ''
@@ -11,22 +11,22 @@ class UrlBuilder:
         self.param_args = {}
 
         # call setters for base_url and method
-        self.setBaseUrl(base_url)
-        self.setMethod(method)
+        self.set_base_url(base_url)
+        self.set_method(method)
 
-    def setBaseUrl(self, base_url):
+    def set_base_url(self, base_url):
         self.base_url = base_url
         return self
 
-    def setMethod(self, method):
+    def set_method(self, method):
         self.method = method
         return self
 
-    def addParam(self, param, arg):
+    def add_param(self, param, arg):
         self.param_args[param] = arg
         return self
 
-    def getUrl(self):
+    def get_url(self):
         url = self.base_url + '/' + self.method
         param_list = []
 
@@ -41,5 +41,3 @@ class UrlBuilder:
                     url += '&'
 
         return url
-
-

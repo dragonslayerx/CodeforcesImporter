@@ -1,18 +1,18 @@
 class Submission:
-    def __init__(self, id = None, contestId = None, problem = None, verdict = None):
+    def __init__(self, id=None, contest_id=None, problem=None, verdict=None):
         self.id = id
-        self.contestId = contestId
+        self.contest_id = contest_id
         self.problem = problem
         self.verdict = verdict
 
-    def setId(self, id):
+    def set_id(self, id):
         self.id = id;
 
-    def setContestId(self, contestId):
-        self.contestId = contestId
+    def set_contest_id(self, contest_id):
+        self.contest_id = contest_id
 
-    def setProblem(self, problem):
+    def set_problem(self, problem):
         self.problem = problem
 
-    def setVerdict(self, verdict):
+    def set_verdict(self, verdict):
         self.verdict = verdict

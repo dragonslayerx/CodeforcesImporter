@@ -1,29 +1,40 @@
+import os
+import errno
 
-from config import Codeforces
-from httpRequest import HttpRequest
-from SubmissionImporter import SubmissionImport
-from lxml import html
-from sourceCodeExtractor import  SourceCodeExtractor
+import source_code_extractor
+from submission_importer import SubmissionImport
 
-importer = SubmissionImport('m17');
 
-submissions_list = importer.getSubmissions()
+importer = SubmissionImport('dragonslayerx')
+submissions_list = importer.get_submissions()
 
-# for key in submissions_list:
-#     print "{",
-#     print key.contestId,
-#     print key.problem.index,
-#     print key.problem.name,
-#     print key.verdict,
-#     print key.id,
-#     print "}"
+flags = os.O_CREAT | os.O_EXCL | os.O_WRONLY
 
-code = SourceCodeExtractor.extractSourceCode(459, 7457076);
+for key in submissions_list:
+    print "{",
+    print key.contest_id,
+    print key.problem.index,
+    print key.problem.name,
+    print key.verdict,
+    print key.id,
+    print "}"
 
-path = 'C:\Users\dragonslayer\Desktop\\1.txt'
+    code = source_code_extractor.extract_source_code(str(key.contest_id), str(key.id));
 
-print path
+    problemName = key.problem.name
+    print problemName
 
-target = open(path, 'w')
-target.truncate();
-target.write(str(code));
+    path = 'C:\Users\dragonslayer\Desktop\\log\\' + key.problem.name + '.txt'
+
+    print path
+
+    try:
+        file_handle = os.open(path, flags)
+    except OSError as e:
+        if e.errno == errno.EEXIST:
+            pass
+        else:
+            raise
+    else:
+        with os.fdopen(file_handle, 'w') as file_obj:
+            file_obj.write(code)
