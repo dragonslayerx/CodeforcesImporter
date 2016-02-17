@@ -13,6 +13,6 @@ def send_get_request(url, args=None):
         print 'Too Many redirects'
         sys.exit(1)
     except requests.exceptions.RequestException:
-        print 'Catastrophic error'
+        print 'Unable to connect'
         sys.exit(1)
 

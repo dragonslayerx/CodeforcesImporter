@@ -10,5 +10,6 @@ def write_to_file(file_path, content):
     except OSError as e:
         print 'Error: ' + e.errno
     else:
-        with os.fdopen(file_handle, 'w') as file_obj:
-            file_obj.write(content)
+        if content is not None:
+            with os.fdopen(file_handle, 'w') as file_obj:
+                file_obj.write(content)

@@ -16,29 +16,33 @@ def import_codes(handle, dir_path='.\log\\'):
                 for key in submissions_list:
 
                     print "[",
-                    print 'id = ' + str(key.contest_id) + ',',
-                    print 'name =' + key.problem.index + key.problem.name + ',',
-                    print 'verdict = ' + key.verdict + ',',
+                    print 'id = ' + str(key.contest_id) + key.problem.index + ', ',
+                    print 'name = ' + key.problem.name + ', ',
+                    print 'verdict = ' + key.verdict + ', ',
                     print 'submission_id=' + str(key.id),
                     print "]"
 
                     code = source_code_extractor.extract_source_code(str(key.contest_id), str(key.id));
 
-                    problem_name = key.problem.name
+                    problem_id = str(key.contest_id) + key.problem.index
 
+                    problem_name = key.problem.name
                     problem_name = resolve(problem_name);
 
-                    path = dir_path + '\\' + problem_name + '.txt'
+                    path = dir_path + '\\' + problem_id + '-' + problem_name + '.txt'
 
                     print 'Create ' + path
 
                     file_io.write_to_file(path, code);
 
-        except TypeError as e:
-            print e.message
-            raise e
-    except Exception as e:
-        print e
+                    print 'Successfully written ' + problem_name + ' to ' + path
+                    print ''
+
+        except TypeError as ex:
+            print ex.message
+            raise ex
+    except Exception as ex:
+        print ex
         print 'Unable to fetch your submissions at the moment'
     else:
         print 'Import-Status: Successful'
