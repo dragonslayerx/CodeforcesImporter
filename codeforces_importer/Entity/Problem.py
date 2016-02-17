@@ -1,9 +1,9 @@
 class Problem:
-    def __init__(self):
-        self.contestId = None
-        self.index = None
-        self.name = None
-        self.tags = None
+    def __init__(self, contestId=None, index=None, name=None, tags=None):
+        self.contestId = contestId
+        self.index = index
+        self.name = name
+        self.tags = tags
 
     def __init__(self, prob_dict):
             self.contestId = prob_dict['contestId']
