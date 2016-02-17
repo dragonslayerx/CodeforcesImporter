@@ -11,6 +11,7 @@ submissions_list = importer.get_submissions()
 flags = os.O_CREAT | os.O_EXCL | os.O_WRONLY
 
 for key in submissions_list:
+
     print "{",
     print key.contest_id,
     print key.problem.index,
