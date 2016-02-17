@@ -9,7 +9,19 @@ from httpRequest import HttpRequest
 #
 # print url.getUrl()
 
-response = HttpRequest.sendGetRequest(url.getUrl());
+from SubmissionImporter import SubmissionImport
+importer = SubmissionImport('dragonslayerx');
+
+submissions_list = importer.getSubmissions()
+
+for key in submissions_list:
+    print "{",
+    print key.contestId,
+    print key.problem.index,
+    print key.problem.name,
+    print key.verdict,
+    print key.id,
+    print "}"
 
 
 

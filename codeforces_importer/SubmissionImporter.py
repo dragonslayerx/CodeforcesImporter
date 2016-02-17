@@ -12,22 +12,22 @@ class SubmissionImport:
         self.handle = handle;
 
     def generateUrl(self):
-        url = UrlBuilder(Codeforces.API_URL);
-        url.addParam(UserRequestMethod.SUBMISSION_METHOD, self.handle)
+        url = UrlBuilder(Codeforces.API_URL, UserRequestMethod.SUBMISSION_METHOD);
+        url.addParam('handle', self.handle)
         url.addParam('from', '1')
         url.addParam('count', '1000');
         return url.getUrl()
 
     def importSubmissions(self):
         url = self.generateUrl()
+        print url
         response = HttpRequest.sendGetRequest(url);
         return response.json()
 
     def getSubmissions(self):
         response = self.importSubmissions();
 
-        if type(response) is __dict__:
-            for subdict in response:
+        for subdict in response['result']:
 
                 submission = Submission();
                 if 'id' in subdict:
@@ -39,5 +39,7 @@ class SubmissionImport:
                 if 'verdict' in subdict:
                     submission.setVerdict(subdict['verdict'])
 
-                self.submissions.append(submission);
+                if submission.verdict == 'OK':
+                   self.submissions.append(submission);
 
+        return self.submissions
