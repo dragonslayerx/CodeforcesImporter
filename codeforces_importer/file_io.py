@@ -6,6 +6,7 @@ WRITE_FLAGS = os.O_CREAT | os.O_WRONLY
 
 def write_to_file(file_path, content):
     try:
+        print file_path
         file_handle = os.open(file_path, WRITE_FLAGS)
     except OSError as e:
         print 'Error: ' + e.errno

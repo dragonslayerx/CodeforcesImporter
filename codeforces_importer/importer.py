@@ -1,4 +1,3 @@
-import sys
 import file_io
 import source_code_extractor
 
@@ -15,31 +14,34 @@ def import_codes(handle, dir_path='.\log\\'):
             if submissions_list is not None:
                 for key in submissions_list:
 
-                    print "[",
-                    print 'id = ' + str(key.contest_id) + key.problem.index + ', ',
-                    print 'name = ' + key.problem.name + ', ',
-                    print 'verdict = ' + key.verdict + ', ',
-                    print 'submission_id=' + str(key.id),
-                    print "]"
+                    try:
+                        print "[",
+                        print 'id = ' + str(key.contest_id) + key.problem.index + ', ',
+                        print 'name = ' + key.problem.name + ', ',
+                        print 'verdict = ' + key.verdict + ', ',
+                        print 'submission_id=' + str(key.id),
+                        print "]"
 
-                    code = source_code_extractor.extract_source_code(str(key.contest_id), str(key.id));
+                        code = source_code_extractor.extract_source_code(str(key.contest_id), str(key.id));
 
-                    problem_id = str(key.contest_id) + key.problem.index
+                        problem_id = str(key.contest_id) + key.problem.index
 
-                    problem_name = key.problem.name
-                    problem_name = resolve(problem_name);
+                        problem_name = key.problem.name
+                        problem_name = resolve(problem_name);
 
-                    path = dir_path + '\\' + problem_id + '-' + problem_name + '.txt'
+                        path = dir_path + '\\' + problem_id + '-' + problem_name + '.txt'
 
-                    print 'Create ' + path
+                        print 'Create ' + path
 
-                    file_io.write_to_file(path, code);
+                        file_io.write_to_file(path, code);
 
-                    print 'Successfully written ' + problem_name + ' to ' + path
-                    print ''
-
+                        print 'Successfully written ' + problem_name + ' to ' + path
+                        print ''
+                    except TypeError as ex:
+                        print 'Unable to concatenate string with integer'
+                    except Exception as ex:
+                        raise ex
         except TypeError as ex:
-            print ex.message
             raise ex
     except Exception as ex:
         print ex
