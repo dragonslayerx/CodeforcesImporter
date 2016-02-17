@@ -33,12 +33,12 @@ class UrlBuilder:
         for key in self.param_args:
             param_list.append((key, self.param_args[key]))
 
-        if (len(param_list) > 0) :
-            url = url + '?'
+        if len(param_list) > 0:
+            url += '?'
             for i in range(0, len(param_list)):
                 url = url + param_list[i][0] + '=' + param_list[i][1]
-                if (i < len(param_list)-1):
-                    url = url + ','
+                if i+1 < len(param_list):
+                    url += ','
 
         return url
 
