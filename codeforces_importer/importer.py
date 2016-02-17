@@ -8,6 +8,7 @@ def import_codes(handle, dir_path='.\log\\'):
 
     try:
         importer = SubmissionImport(handle)
+
         try:
             submissions_list = importer.get_submissions()
 
@@ -37,14 +38,16 @@ def import_codes(handle, dir_path='.\log\\'):
 
                         print 'Successfully written ' + problem_name + ' to ' + path
                         print ''
-                    except TypeError as ex:
-                        print 'Unable to concatenate string with integer'
+
                     except Exception as ex:
-                        raise ex
-        except TypeError as ex:
+                        print ex
+
+        except Exception:
             raise ex
+
     except Exception as ex:
-        print ex
+        print 'Error: ' + ex.errno
+
         print 'Unable to fetch your submissions at the moment'
     else:
         print 'Import-Status: Successful'
