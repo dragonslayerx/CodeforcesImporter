@@ -1,5 +1,18 @@
 import requests;
+import sys
 
 
 def send_get_request(url, args=None):
-    return requests.get(url, args);
+    try:
+        response = requests.get(url, args);
+        return response
+    except requests.exceptions.Timeout:
+        print 'Connection Timed Out'
+        sys.exit(1)
+    except requests.exceptions.TooManyRedirects:
+        print 'Too Many redirects'
+        sys.exit(1)
+    except requests.exceptions.RequestException:
+        print 'Catastrophic error'
+        sys.exit(1)
+
