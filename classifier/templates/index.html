@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8"/>
-    <title>Proba</title>
-</head>
-<body>
-<center>
-    <h1>Problem</h1>
-    <p>{{ urls|length }} links</p>
-</center>
-<ol align="left">
-{% set counter = 0 -%}
-{% for tag in category -%}
-<li>{{ tag }}</li>
-{% set counter = 0 -%}
-{% for name in category[tag] -%}
-  <h6> <a href = "{{ links[name] }} "> {{ name  }} </a></h6>
-<h6><a href="{{ submission[name] }}"> Submission</a> </h6> 
-{% set counter = counter + 1 -%}
-{% endfor -%}
+    <head>
+        <meta charset="utf-8"/>
+        <title>Submission Classifier</title>
+    </head>
+    <body>
+        <center>
+            <h1>Submission Classifier</h1>
+            <p>{{ urls|length }} links</p>
+        </center>
 
-{% set counter = counter + 1 -%}
-{% endfor -%}
-</ol>
-</body>
+        <ol align="left">
+        {% set counter = 0 -%}
+        {% for tag in category -%}
+        <li>{{ tag }}</li>
+        {% set counter = 0 -%}
+        {% for name in category[tag] -%}
+          <h4> <a href = "{{ links[name] }} "> {{ name  }} </a></h4>
+        <h3><a href="{{ submission[name] }}"> Submission</a> </h3>
+        {% set counter = counter + 1 -%}
+        {% endfor -%}
+
+        {% set counter = counter + 1 -%}
+        {% endfor -%}
+        </ol>
+    </body>
 </html>

@@ -1,5 +1,4 @@
 import os
-import errno
 
 WRITE_FLAGS = os.O_CREAT | os.O_WRONLY
 

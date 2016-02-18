@@ -1,15 +1,10 @@
-from config import Codeforces
 import httprequest
+import urlgen
 from lxml import html
 
 
-def generate_submission_url(contest_id, submission_id):
-    url = Codeforces.BASE_URL + "/contest/" + str(contest_id) + "/submission/" + str(submission_id);
-    return url
-
-
 def extract_source_code(contest_id, submission_id):
-    submission_url = generate_submission_url(contest_id, submission_id)
+    submission_url = urlgen.generate_submission_url(contest_id, submission_id)
 
     print submission_url
 

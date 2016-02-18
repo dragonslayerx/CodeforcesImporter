@@ -1,5 +1,5 @@
-from codeforces_importer.Entity.Problem import Problem
-from codeforces_importer.urlbuilder import Urlbuilder
+from Entity.Problem import Problem
+from urlbuilder import Urlbuilder
 from config import Codeforces
 from config import UserRequestMethod
 from Entity.Submission import Submission
