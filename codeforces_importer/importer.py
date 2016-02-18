@@ -6,9 +6,9 @@ from CodeforcesImporter.classifier.classifier import Classifier
 from submission_importer import SubmissionImport
 
 
-def import_codes(handle, dir_path='.\log\\'):
+def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
     try:
-        importer = SubmissionImport(handle)
+        importer = SubmissionImport(handle, max_sub_lim)
         try:
             submissions_list = importer.get_submissions()
 
@@ -38,15 +38,12 @@ def import_codes(handle, dir_path='.\log\\'):
                     except Exception as ex:
                         print ex
 
-                print dir_path
                 template_generator.generate_html(classifier, dir_path)
 
-        except TypeError as ex:
-            print ex
         except Exception as ex:
             raise ex
     except Exception as ex:
-        print 'Error: ' + ex.errno
+        print 'Error: ' + ex
         print 'Unable to fetch your submissions at the moment'
     else:
         print 'Import-Status: Successful'

@@ -1,5 +1,4 @@
 import os
-from CodeforcesImporter.codeforces_importer import file_io
 from jinja2 import Environment, FileSystemLoader
 
 PATH = os.path.dirname(os.path.abspath(__file__))
@@ -15,19 +14,24 @@ def render_template(template_filename, context):
 
 
 def create_index_html(classifier, dir_path):
-    output_html = dir_path+"\output.html"
+    try:
+        output_html = dir_path+"\output.html"
 
-    context = {
-        'names': classifier.problem_list,
-        'links': classifier.problem_link,
-        'category': classifier.problem_tags,
-        'submission': classifier.submission_link,
-        'local': classifier.local_path_link
-    }
+        context = {
+            'names': classifier.problem_list,
+            'links': classifier.problem_link,
+            'category': classifier.problem_tags,
+            'submission': classifier.submission_link,
+            'local': classifier.local_path_link
+        }
 
-    with open(output_html, 'w') as output:
-        html = render_template('index.html', context)
-        output.write(html)
+        with open(output_html, 'w') as output:
+            html = render_template('index.html', context)
+            html = html.encode('utf-8')
+            output.write(html)
+
+    except UnicodeEncodeError as ex:
+        print ex
 
 
 def generate_html(classifier, dir_path):

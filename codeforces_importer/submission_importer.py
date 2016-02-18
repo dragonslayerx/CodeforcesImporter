@@ -8,15 +8,16 @@ import httprequest
 
 class SubmissionImport:
 
-    def __init__(self, handle):
+    def __init__(self, handle, max_sub_lim):
         self.submissions = []
         self.handle = handle
+        self.max_sub_lim = max_sub_lim
 
     def generate_url(self):
         url = Urlbuilder(Codeforces.API_URL, UserRequestMethod.SUBMISSION_METHOD);
         url.add_param('handle', self.handle)
         url.add_param('from', '1')
-        url.add_param('count', '1000')
+        url.add_param('count', self.max_sub_lim)
         return url.get_url()
 
     def import_submissions(self):

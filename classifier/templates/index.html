@@ -13,20 +13,20 @@
         {% set counter = 0 -%}
         {% for tag in category -%}
             <li><h2>{{ tag }}</h2></li>
-                <table>
+                <table width="100%">
                     <th>Problem-Name</th>
                     <th>Submission-Link</th>
                     <th>Local-Link</th>
                 {% set counter = 0 -%}
                 {% for name in category[tag] -%}
-                        <tr>
-                           <td width = '33%'>
+                        <tr width = "100%">
+                           <td width = "33%">
                                <b><a href="{{ links[name] }} "> {{ name }} </a></b>
                            </td>
-                           <td width = '33%'>
+                           <td width = "33%">
                                <i><a href="{{ submission[name] }}"> Submission-link </a></i>
                            </td>
-                           <td width = '33%'>
+                           <td width = "33%">
                                <i><a href="{{ local[name] }}"> Local-link </a></i>
                            </td>
                         </tr>
