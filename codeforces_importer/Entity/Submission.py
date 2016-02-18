@@ -16,3 +16,12 @@ class Submission:
 
     def set_verdict(self, verdict):
         self.verdict = verdict
+
+
+def log_submission(submission):
+    print "[",
+    print 'id = ' + str(submission.contest_id) + submission.problem.index + ', ',
+    print 'name = ' + submission.problem.name + ', ',
+    print 'verdict = ' + submission.verdict + ', ',
+    print 'submission_id=' + str(submission.id),
+    print "]"

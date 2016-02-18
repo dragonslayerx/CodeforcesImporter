@@ -1,6 +1,7 @@
 import sys
 import os
 from jinja2 import Environment, FileSystemLoader
+from CodeforcesImporter.codeforces_importer import urlgen
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE_ENVIRONMENT = Environment(
@@ -14,9 +15,13 @@ def render_template(template_filename, context):
     return TEMPLATE_ENVIRONMENT.get_template(template_filename).render(context)
 
 
-def create_index_html(classifier, dir_path):
+def generate_html(handle, classifier, dir_path):
+    create_index_html(handle, classifier, dir_path)
+
+
+def create_index_html(handle, classifier, dir_path):
     try:
-        output_html = dir_path+"\output.html"
+        output_html = dir_path+"\classified-problems.html"
 
         context = {
             'names': classifier.problem_list,
@@ -25,7 +30,9 @@ def create_index_html(classifier, dir_path):
             'submission': classifier.submission_link,
             'local': classifier.local_path_link,
             'index': classifier.problem_index,
-            'submission_count': len(classifier.problem_list)
+            'submission_count': len(classifier.problem_list),
+            'handle': handle,
+            'handle_link': urlgen.generate_profile_url(handle)
         }
 
         with open(output_html, 'w') as output:
@@ -40,5 +47,3 @@ def create_index_html(classifier, dir_path):
         sys.exit(1)
 
 
-def generate_html(classifier, dir_path):
-    create_index_html(classifier, dir_path)

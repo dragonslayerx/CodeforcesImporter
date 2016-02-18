@@ -3,7 +3,7 @@ import file_io
 import source_code_extractor
 from CodeforcesImporter.classifier import html_generator
 from CodeforcesImporter.classifier.classifier import Classifier
-
+from Entity.Submission import log_submission
 from submission_importer import SubmissionImport
 
 
@@ -19,7 +19,10 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
                         log_submission(submission)
                         code = source_code_extractor.extract_source_code(str(submission.contest_id), str(submission.id));
 
+                        # generates problem_id
                         problem_id = str(submission.contest_id) + submission.problem.index
+
+                        # generates problem_name
                         problem_name = submission.problem.name
                         problem_name = resolve(problem_name);
 
@@ -37,13 +40,15 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
                     except Exception as ex:
                         print ex.message
 
-                html_generator.generate_html(classifier, dir_path)
+                html_generator.generate_html(handle, classifier, dir_path)
 
         except Exception as ex:
             raise ex
+
     except Exception as ex:
         print 'Error: ' + ex.message
         print 'Unable to fetch your submissions at the moment'
+
     else:
         print 'Import-Status: Successful'
 
@@ -52,11 +57,3 @@ def resolve(problem_name):
     problem_name = problem_name.replace('/', '').replace('\\', '').replace(' ', '_');
     return problem_name
 
-
-def log_submission(submission):
-    print "[",
-    print 'id = ' + str(submission.contest_id) + submission.problem.index + ', ',
-    print 'name = ' + submission.problem.name + ', ',
-    print 'verdict = ' + submission.verdict + ', ',
-    print 'submission_id=' + str(submission.id),
-    print "]"

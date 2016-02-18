@@ -1,3 +1,4 @@
+import sys
 from Entity.Problem import Problem
 from urlbuilder import Urlbuilder
 from config import Codeforces
@@ -55,6 +56,7 @@ class SubmissionImport:
 
         elif 'comment' in response:
             print response['comment']
+            sys.exit(1)
         else:
             print 'Unable to Connect'
 

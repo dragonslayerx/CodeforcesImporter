@@ -18,8 +18,9 @@ def extract_source_code(contest_id, submission_id):
             return fix_eol(str(code[0]));
         else:
             raise ValueError('Empty Content')
-    except ValueError as e:
-        print e.message
+
+    except ValueError as ex:
+        print ex.message
 
 
 def fix_eol(code):
