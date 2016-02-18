@@ -1,9 +1,9 @@
 from codeforces_importer.Entity.Problem import Problem
-from codeforces_importer.urlbuilder import Urlbuilder
+from codeforces_importer.url_builder import Urlbuilder
 from config import Codeforces
 from config import UserRequestMethod
 from Entity.Submission import Submission
-import httprequest
+import http_request
 
 
 class SubmissionImport:
@@ -21,7 +21,7 @@ class SubmissionImport:
 
     def import_submissions(self):
             url = self.generate_url()
-            response = httprequest.send_get_request(url);
+            response = http_request.send_get_request(url);
             if 'status' in response.json():
                 if response.json()['status'] == 'OK':
                     print 'Connection Status: Successful'

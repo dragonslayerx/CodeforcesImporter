@@ -2,8 +2,8 @@ import file_io
 import source_code_extractor
 
 from submission_importer import SubmissionImport
-
-
+from template_generator import temp
+from template_generator import main
 def import_codes(handle, dir_path='.\log\\'):
 
     try:
@@ -31,6 +31,13 @@ def import_codes(handle, dir_path='.\log\\'):
 
                         path = dir_path + '\\' + problem_id + '-' + problem_name + '.txt'
 
+                        #key.problem
+                        #key.id
+                        #path
+                        #work to be done
+                        temp(key.problem, key.id,path)
+
+                        print 'Create ' + path
                         print 'Create ' + path
 
                         file_io.write_to_file(path, code);
@@ -47,6 +54,7 @@ def import_codes(handle, dir_path='.\log\\'):
         print ex
         print 'Unable to fetch your submissions at the moment'
     else:
+        main()
         print 'Import-Status: Successful'
 
 

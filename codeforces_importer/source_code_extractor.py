@@ -1,5 +1,6 @@
+
 from config import Codeforces
-import httprequest
+import http_request
 from lxml import html
 
 
@@ -13,7 +14,7 @@ def extract_source_code(contest_id, submission_id):
 
     print submission_url
 
-    response = httprequest.send_get_request(submission_url)
+    response = http_request.send_get_request(submission_url)
 
     tree2 = html.fromstring(response.text)
     code = tree2.xpath('//*[@id="pageContent"]/div[3]/pre/text()')
