@@ -35,7 +35,7 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
                         print ''
 
                     except Exception as ex:
-                        print ex
+                        print ex.message
 
                 html_generator.generate_html(classifier, dir_path)
 

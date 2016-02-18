@@ -1,10 +1,5 @@
 class Urlbuilder:
 
-    def _init__(self):
-        self.base_url = ''
-        self.method = ''
-        self.param_args = {}
-
     def __init__(self, base_url, method):
         self.base_url = ''
         self.method = ''

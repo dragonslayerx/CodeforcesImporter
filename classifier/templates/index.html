@@ -7,6 +7,7 @@
     <body>
         <center>
             <h1>Submission Classifier</h1>
+            <h3>Total-Submissions: {{ submission_count }}</h3>
         </center>
 
         <ul align="left">
@@ -14,21 +15,25 @@
         {% for tag in category -%}
             <li><h2>{{ tag }}</h2></li>
                 <table width="100%">
+                    <th>Problem</th>
                     <th>Problem-Name</th>
                     <th>Submission-Link</th>
                     <th>Local-Link</th>
                 {% set counter = 0 -%}
                 {% for name in category[tag] -%}
                         <tr width = "100%">
-                           <td width = "33%">
+                            <td width = "10%">
+                               <b><i><a href="{{ links[name] }} "> {{ index[name] }} </a></i></td><b>
+                            </td>
+                            <td width = "30%">
                                <b><a href="{{ links[name] }} "> {{ name }} </a></b>
-                           </td>
-                           <td width = "33%">
+                            </td>
+                            <td width = "30%">
                                <i><a href="{{ submission[name] }}"> Submission-link </a></i>
-                           </td>
-                           <td width = "33%">
+                            </td>
+                            <td width = "30%">
                                <i><a href="{{ local[name] }}"> Local-link </a></i>
-                           </td>
+                            </td>
                         </tr>
                     {% set counter = counter + 1 -%}
                 {% endfor -%}

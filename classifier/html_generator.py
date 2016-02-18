@@ -1,3 +1,4 @@
+import sys
 import os
 from jinja2 import Environment, FileSystemLoader
 
@@ -22,7 +23,9 @@ def create_index_html(classifier, dir_path):
             'links': classifier.problem_link,
             'category': classifier.problem_tags,
             'submission': classifier.submission_link,
-            'local': classifier.local_path_link
+            'local': classifier.local_path_link,
+            'index': classifier.problem_index,
+            'submission_count': len(classifier.problem_list)
         }
 
         with open(output_html, 'w') as output:
@@ -31,7 +34,10 @@ def create_index_html(classifier, dir_path):
             output.write(html)
 
     except UnicodeEncodeError as ex:
-        print ex
+        print ex.message
+    except (OSError, IOError) as ex:
+        print ex.message
+        sys.exit(1)
 
 
 def generate_html(classifier, dir_path):
