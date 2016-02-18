@@ -7,22 +7,35 @@
     <body>
         <center>
             <h1>Submission Classifier</h1>
-            <p>{{ urls|length }} links</p>
         </center>
 
-        <ol align="left">
+        <ul align="left">
         {% set counter = 0 -%}
         {% for tag in category -%}
-        <li>{{ tag }}</li>
-        {% set counter = 0 -%}
-        {% for name in category[tag] -%}
-          <h4> <a href = "{{ links[name] }} "> {{ name  }} </a></h4>
-        <h3><a href="{{ submission[name] }}"> Submission</a> </h3>
+            <li><h2>{{ tag }}</h2></li>
+                <table>
+                    <th>Problem-Name</th>
+                    <th>Submission-Link</th>
+                    <th>Local-Link</th>
+                {% set counter = 0 -%}
+                {% for name in category[tag] -%}
+                        <tr>
+                           <td width = '33%'>
+                               <b><a href="{{ links[name] }} "> {{ name }} </a></b>
+                           </td>
+                           <td width = '33%'>
+                               <i><a href="{{ submission[name] }}"> Submission-link </a></i>
+                           </td>
+                           <td width = '33%'>
+                               <i><a href="{{ local[name] }}"> Local-link </a></i>
+                           </td>
+                        </tr>
+                    {% set counter = counter + 1 -%}
+                {% endfor -%}
+                </table>
+            <br>
         {% set counter = counter + 1 -%}
         {% endfor -%}
-
-        {% set counter = counter + 1 -%}
-        {% endfor -%}
-        </ol>
+        </ul>
     </body>
 </html>

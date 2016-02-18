@@ -32,14 +32,19 @@ def import_codes(handle, dir_path='.\log\\'):
                         # writing submission to file
                         file_io.write_to_file(path, code);
 
+                        print 'Successfully written submission: ' + str(submission.id) + ' to ' + path
+                        print ''
+
                     except Exception as ex:
                         print ex
 
-                template_generator.generate_html(classifier)
+                print dir_path
+                template_generator.generate_html(classifier, dir_path)
 
-        except Exception:
+        except TypeError as ex:
+            print ex
+        except Exception as ex:
             raise ex
-
     except Exception as ex:
         print 'Error: ' + ex.errno
         print 'Unable to fetch your submissions at the moment'
