@@ -17,7 +17,7 @@ class SubmissionImport:
         url = Urlbuilder(Codeforces.API_URL, UserRequestMethod.SUBMISSION_METHOD);
         url.add_param('handle', self.handle)
         url.add_param('from', '1')
-        url.add_param('count', self.max_sub_lim)
+        url.add_param('count', str(self.max_sub_lim))
         return url.get_url()
 
     def import_submissions(self):

@@ -1,6 +1,7 @@
 import file_io
+
 import source_code_extractor
-from CodeforcesImporter.classifier import template_generator
+from CodeforcesImporter.classifier import html_generator
 from CodeforcesImporter.classifier.classifier import Classifier
 
 from submission_importer import SubmissionImport
@@ -11,13 +12,11 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
         importer = SubmissionImport(handle, max_sub_lim)
         try:
             submissions_list = importer.get_submissions()
-
             if submissions_list is not None:
                 classifier = Classifier()
                 for submission in submissions_list:
                     try:
                         log_submission(submission)
-
                         code = source_code_extractor.extract_source_code(str(submission.contest_id), str(submission.id));
 
                         problem_id = str(submission.contest_id) + submission.problem.index
@@ -38,12 +37,12 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
                     except Exception as ex:
                         print ex
 
-                template_generator.generate_html(classifier, dir_path)
+                html_generator.generate_html(classifier, dir_path)
 
         except Exception as ex:
             raise ex
     except Exception as ex:
-        print 'Error: ' + ex
+        print 'Error: ' + ex.message
         print 'Unable to fetch your submissions at the moment'
     else:
         print 'Import-Status: Successful'
