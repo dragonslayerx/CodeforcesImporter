@@ -1,4 +1,10 @@
 class Submission:
+    """Represents a submission.
+
+    In confirmation to Codeforces API submission object
+    See http://codeforces.com/api/help/objects for more help.
+    """
+
     def __init__(self, id=None, contest_id=None, problem=None, verdict=None):
         self.id = id
         self.contest_id = contest_id
