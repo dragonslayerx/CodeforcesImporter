@@ -1,4 +1,10 @@
 class Submission:
+    """Represents a submission.
+
+    In confirmation to Codeforces API submission object
+    See http://codeforces.com/api/help/objects for more help.
+    """
+
     def __init__(self, id=None, contest_id=None, problem=None, verdict=None):
         self.id = id
         self.contest_id = contest_id
@@ -19,6 +25,8 @@ class Submission:
 
 
 def log_submission(submission):
+    """Prints submissions details."""
+
     print "[",
     print 'id = ' + str(submission.contest_id) + submission.problem.index + ', ',
     print 'name = ' + submission.problem.name + ', ',

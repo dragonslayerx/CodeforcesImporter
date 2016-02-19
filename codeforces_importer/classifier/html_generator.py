@@ -16,13 +16,19 @@ def render_template(template_filename, context):
 
 
 def generate_html(handle, classifier, dir_path):
+    """Creates a html page for classified problems"""
+
     create_index_html(handle, classifier, dir_path)
 
 
 def create_index_html(handle, classifier, dir_path):
+    """Creates a html page for classified problems"""
+
     try:
         output_html = dir_path+"\classified-problems.html"
 
+        # python variables to be mapped with html page
+        # see jinja2 library documentation for more help
         context = {
             'names': classifier.problem_list,
             'links': classifier.problem_link,
@@ -35,6 +41,7 @@ def create_index_html(handle, classifier, dir_path):
             'handle_link': urlgen.generate_profile_url(handle)
         }
 
+        # writes the html file to classified-problems.html
         with open(output_html, 'w') as output:
             html = render_template('index.html', context)
             html = html.encode('utf-8')
@@ -44,6 +51,3 @@ def create_index_html(handle, classifier, dir_path):
         print ex.message
     except (OSError, IOError) as ex:
         print ex.message
-        sys.exit(1)
-
-
