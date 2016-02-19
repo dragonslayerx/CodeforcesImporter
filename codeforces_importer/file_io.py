@@ -8,7 +8,6 @@ def write_to_file(file_path, content):
 
     :param file_path: path of file
     :param content: content to be written
-    :return: None
     """
 
     try:

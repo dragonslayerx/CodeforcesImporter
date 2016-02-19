@@ -7,7 +7,6 @@ def send_get_request(url, args=None):
 
     :param url: url for get request
     :param args: optional args to customize get requests. See 'requests' library for more help.
-    :return:
     """
 
     try:

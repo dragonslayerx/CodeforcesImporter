@@ -1,11 +1,10 @@
 class Urlbuilder:
 
     def __init__(self, base_url, method):
-        """Urlbuilder to build complex urls which confirms HTTP-REST
+        """Build complex urls which confirms HTTP-REST.
 
-        :param base_url: url of REST  eg. codeforces.com/api
+        :param base_url: url of REST API eg. codeforces.com/api
         :param method: api's method to be called eg. user.status
-        :return:
         """
 
         self.base_url = ''
@@ -17,22 +16,26 @@ class Urlbuilder:
         self.set_method(method)
 
     def set_base_url(self, base_url):
-        """Sets the base url"""
+        """Sets the base url."""
+
         self.base_url = base_url
         return self
 
     def set_method(self, method):
-        """Sets the url method"""
+        """Sets the url method."""
+
         self.method = method
         return self
 
     def add_param(self, param, arg):
-        """Add a param-arg pair to query string"""
+        """Add a param-arg pair to query string."""
+
         self.param_args[param] = arg
         return self
 
     def get_url(self):
-        """Generates url using base_url, method_name, param-args pair and returns it"""
+        """Generates url using base_url, method_name, param-args pairs and returns it"""
+
         url = self.base_url + '/' + self.method
         param_list = []
 

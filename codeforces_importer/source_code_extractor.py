@@ -11,7 +11,6 @@ def extract_source_code(contest_id, submission_id):
 
     :param contest_id: contest id where the problem appeared
     :param submission_id: submission id to be fetched
-    :return:
     """
 
     # generates url for Codeforces submission page for submission#submissions_id
@@ -39,5 +38,6 @@ def extract_source_code(contest_id, submission_id):
 
 
 def fix_eol(code):
+    """Fix end of line in source code and returns it"""
     code = code.replace('\\r\\n', '\r\n')
     return code

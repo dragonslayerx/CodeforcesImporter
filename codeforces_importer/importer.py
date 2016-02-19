@@ -4,21 +4,20 @@ import source_code_extractor
 from CodeforcesImporter.classifier import html_generator
 from CodeforcesImporter.classifier.classifier import Classifier
 from Entity.Submission import log_submission
-from submission_importer import SubmissionImport
+from submission_list_importer import SubmissionImport
 
 
 def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
     """Calls modules to import user-submissions-list, extract source-code, adding problems to classifier and write to file.
 
     Imports user's-submissions-list using Codeforces API.
-    Extracts source-code usin lxml library.
+    Extracts source-code using lxml library.
     Adds problems and associated tags to Classifier.
     Writes source-code to file.
 
     :param handle: user's handle whose submissions are to be imported
     :param dir_path: local directory path where submissions are saved
     :param max_sub_lim: max #overall_submissions to fetch from submission page
-    :return:
     """
 
     try:
@@ -28,12 +27,14 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
             submissions_list = importer.get_submissions()
 
             if submissions_list is not None:
-                # instance of classifier for storing  problem_name, associated_tags information
+                # instance of classifier for storing problem_name, associated_tags information
                 classifier = Classifier()
 
                 for submission in submissions_list:
                     try:
+                        # print details about the submission
                         log_submission(submission)
+
                         # extracts the source code at the submission id
                         code = source_code_extractor.extract_source_code(str(submission.contest_id), str(submission.id));
 

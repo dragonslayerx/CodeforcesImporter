@@ -4,6 +4,7 @@ class Problem:
     In confirmation to Codeforces API problem object
     See http://codeforces.com/api/help/objects for more help.
     """
+
     def __init__(self, contest_id=None, index=None, name=None, tags=None):
         self.contest_id = contest_id
         self.index = index

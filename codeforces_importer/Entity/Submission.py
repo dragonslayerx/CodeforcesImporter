@@ -25,6 +25,8 @@ class Submission:
 
 
 def log_submission(submission):
+    """Prints submissions details."""
+
     print "[",
     print 'id = ' + str(submission.contest_id) + submission.problem.index + ', ',
     print 'name = ' + submission.problem.name + ', ',

@@ -2,6 +2,11 @@ from CodeforcesImporter.codeforces_importer import urlgen
 
 
 class Classifier:
+    """Classifies the problem according to their tags.
+
+    Keep relevant information like problem index, associated tags and links.
+    Also keep submission-links and local-links mapped to problem-name.
+    """
 
     def __init__(self):
         self.problem_list = []
@@ -12,12 +17,14 @@ class Classifier:
         self.local_path_link ={}
 
     def add_to_classifier(self, problem, submission_id, local_path):
+        """Adds a problem and submission details to Classifier."""
 
         problem_url = urlgen.generate_problem_url(problem.contest_id, problem.index)
         submission_url = urlgen.generate_submission_url(problem.contest_id, submission_id)
 
         self.problem_list.append(problem.name)
 
+        # add to all the tags
         for tag in problem.tags:
             self.problem_tags.setdefault(tag, []).append(problem.name)
 
