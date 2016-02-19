@@ -28,7 +28,7 @@ def create_index_html(handle, classifier, dir_path):
         output_html = dir_path+"\classified-problems.html"
 
         # python variables to be mapped with html page
-        # see jinja2 library for more help
+        # see jinja2 library documentation for more help
         context = {
             'names': classifier.problem_list,
             'links': classifier.problem_link,

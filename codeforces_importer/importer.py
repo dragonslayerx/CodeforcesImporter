@@ -1,8 +1,7 @@
 import file_io
-
 import source_code_extractor
-from CodeforcesImporter.classifier import html_generator
-from CodeforcesImporter.classifier.classifier import Classifier
+from CodeforcesImporter.codeforces_importer.classifier.classifier import Classifier
+from CodeforcesImporter.codeforces_importer.classifier import html_generator
 from Entity.Submission import log_submission
 from submission_list_importer import SubmissionImport
 
@@ -68,10 +67,10 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
 
     except Exception as ex:
         print 'Error: ' + ex.message
-        print 'Unable to fetch your submissions at the moment'
+        print 'Unable to fetch your submissions at the moment.'
 
     else:
-        print 'Import-Status: Successful'
+        print 'Import-Status: Successful.'
 
 
 def resolve(problem_name):
