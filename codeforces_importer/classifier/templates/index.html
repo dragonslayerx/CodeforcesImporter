@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <meta charset="utf-8"/>
         <title>Submission Classifier</title>
     </head>
-    <body>
         <center>
             <h1>Submission Classifier</h1>
              <h3>
@@ -12,16 +12,34 @@
              </h3>
             <h3><b>Total-Submissions:</b> {{ submission_count }}</h3>
         </center>
+        <center>
+            <table width = "30%">
 
+                <th align="left"> <h2> Category </h2> </th>
+                <th align="center"> <h2> Submissions </h2></th>
+
+                {% set counter = 0 -%}
+                {% for tag in category -%}
+                    <tr >
+                        <td> <i>  {{ tag }} </i> :  </td>
+                        <td><center> {{  category_counter[tag] }} </center></td>
+                    </tr>
+                {% set counter = counter + 1 -%}
+                {% endfor -%}
+            </table>
+        </center>
+        <br>
+        <hr>
+        <br>
         <ul align="left">
         {% set counter = 0 -%}
         {% for tag in category -%}
             <li><h2>{{ tag }}</h2></li>
-                <table width="100%">
-                    <th>Problem</th>
-                    <th>Problem-Name</th>
-                    <th>Submission-Link</th>
-                    <th>Local-Link</th>
+            <table width="100%">
+                <th align="left">Problem</th>
+                <th align="left">Problem-Name</th>
+                <th align="left">Submission-Link</th>
+                <th align="left">Local-Link</th>
                 {% set counter = 0 -%}
                 {% for name in category[tag] -%}
                         <tr width = "100%">

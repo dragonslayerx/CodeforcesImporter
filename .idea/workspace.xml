@@ -2,10 +2,126 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38524469-1e76-476d-abd0-1f8b19f27861" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/100299C-Magical_GCD.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/100299F-Draughts.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/100299L-Bus.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/100418A-A+-B.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/100418B-Sum_of_sequences.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/100418J-Lucky_tickets.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/100488D-Toy_Soldiers.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/100488E-Just_Change_a_Word.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/100488F-Two_Envelopes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/100488G-Change-making_Problem.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/100488M-Construct_a_Permutation.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/100541A-Stock_Market.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/100541B-Sum.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/100541D-Treasure_Box.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/100541I-Space_Tour.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/118A-String_Task.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/118B-Present_from_Lena.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/118C-Fancy_Number.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/118D-Caesar's_Legions.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/119A-Epic_Game.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/146D-Lucky_Number_2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/205A-Little_Elephant_and_Rozdil.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/205B-Little_Elephant_and_Sorting.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/205C-Little_Elephant_and_Interval.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/205D-Little_Elephant_and_Cards.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/221A-Little_Elephant_and_Function.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/221B-Little_Elephant_and_Numbers.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/221C-Little_Elephant_and_Problem.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/330A-Cakeminator.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/330B-Road_Construction.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/330C-Purification.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/350A-TL.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/350B-Resort.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/362A-Two_Semiknights_Meet.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/362B-Petya_and_Staircases.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/362C-Insertion_Sort.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/492A-Vanya_and_Cubes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/492B-Vanya_and_Lanterns.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/492C-Vanya_and_Exams.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/492D-Vanya_and_Computer_Game.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/496A-Minimum_Difficulty.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/496B-Secret_Combination.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/496C-Removing_Columns.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/499A-Watching_a_movie.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/499B-Lecture.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/499C-Crazy_Town.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/507A-Amr_and_Music.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/507B-Amr_and_Pins.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/507C-Guess_Your_Way_Out!.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/508A-Pasha_and_Pixels.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/508B-Anton_and_currency_you_all_know.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/508C-Anya_and_Ghosts.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/509A-Maximum_in_Table.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/509B-Painting_Pebbles.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/509C-Sums_of_Digits.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/519A-A_and_B_and_Chess.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/519B-A_and_B_and_Compilation_Errors.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/519C-A_and_B_and_Team_Training.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/519D-A_and_B_and_Interesting_Substrings.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/519E-A_and_B_and_Lecture_Rooms.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/525A-Vitaliy_and_Pie.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/525B-Pasha_and_String.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/525C-Ilya_and_Sticks.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/528A-Glass_Carving.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/534A-Exam.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/534B-Covered_Path.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/534C-Polycarpus'_Dice.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/534D-Handshakes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/544B-Sea_and_Islands.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/545A-Toy_Cars.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/545B-Equidistant_String.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/545C-Woodcutters.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/545D-Queue.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/545E-Paths_and_Trees.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/546A-Soldier_and_Bananas.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/546B-Soldier_and_Badges.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/546C-Soldier_and_Cards.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/546D-Soldier_and_Number_Game.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/546E-Soldier_and_Traveling.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/547A-Mike_and_Frog.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/547B-Mike_and_Feet.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/550A-Two_Substrings.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/550B-Preparing_Olympiad.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/550C-Divisibility_by_Eight.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/552A-Vanya_and_Table.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/552B-Vanya_and_Books.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/554B-Ohana_Cleans_Up.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/557A-Ilya_and_Diplomas.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/557B-Pasha_and_Tea.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/557C-Arthur_and_Table.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/557D-Vitaly_and_Cycle.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/558A-Lala_Land_and_Apple_Trees.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/558B-Amr_and_The_Large_Array.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/558C-Amr_and_Chemistry.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/598A-Tricky_Sum.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/598B-Queries_on_a_String.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/598D-Igor_In_the_Museum.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/598E-Chocolate_Bar.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/606A-Magic_Spheres.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/606B-Testing_Robots.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/610A-Pasha_and_Stick.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/610B-Vika_and_Squares.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/612A-The_Text_Splitting.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/612B-HDD_is_Outdated_Technology.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/612C-Replace_To_Make_Regular_Bracket_Sequence.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/614A-LinkCut_Tree.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/624A-Save_Luke.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/624B-Making_a_String.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/624C-Graph_and_String.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/67A-Partial_Teacher.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/67B-Restoration_of_the_Permutation.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/67D-Optical_Experiment.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/cfiignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/classified-problems.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/CodeforcesImporter.iml" afterPath="$PROJECT_DIR$/.idea/CodeforcesImporter.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeforces_importer/cfi_ignore.py" afterPath="$PROJECT_DIR$/codeforces_importer/cfi_ignore.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeforces_importer/classifier/classifier.py" afterPath="$PROJECT_DIR$/codeforces_importer/classifier/classifier.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeforces_importer/importer.py" afterPath="$PROJECT_DIR$/codeforces_importer/importer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeforces_importer/classifier/html_generator.py" afterPath="$PROJECT_DIR$/codeforces_importer/classifier/html_generator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeforces_importer/classifier/templates/index.html" afterPath="$PROJECT_DIR$/codeforces_importer/classifier/templates/index.html" />
     </list>
     <ignored path="CodeforcesImporter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +146,7 @@
         <entry file="file://$PROJECT_DIR$/codeforces_importer/importer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="87" column="25" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -42,16 +158,16 @@
         <entry file="file://$PROJECT_DIR$/codeforces_importer/classifier/html_generator.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cfi_ignore.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cfi_ignore.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codeforces_importer/cfi_ignore.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42894056">
+            <state vertical-scroll-proportion="0.0">
               <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
               <folding />
             </state>
@@ -62,7 +178,17 @@
         <entry file="file://$PROJECT_DIR$/codeforces_importer/source_code_extractor.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/codeforces_importer/classifier/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7348703">
+              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -72,20 +198,10 @@
         <entry file="file://$PROJECT_DIR$/codeforces_importer/submission_list_importer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codeforces_importer/classifier/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -94,10 +210,20 @@
         <entry file="file://$PROJECT_DIR$/codeforces_importer/classifier/classifier.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+              <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codeforces_importer/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -112,23 +238,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="httprequest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codeforces_importer/httprequest.py">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codeforces_importer/config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urlbuilder.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codeforces_importer/urlbuilder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -166,15 +280,16 @@
         <option value="$PROJECT_DIR$/codeforces_importer/import.py" />
         <option value="$PROJECT_DIR$/codeforces_importer/submission_importer.py" />
         <option value="$PROJECT_DIR$/codeforces_importer/httprequest.py" />
-        <option value="$PROJECT_DIR$/codeforces_importer/source_code_extractor.py" />
         <option value="$PROJECT_DIR$/codeforces_importer/main.py" />
-        <option value="$PROJECT_DIR$/codeforces_importer/classifier/html_generator.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/codeforces_importer/file_io.py" />
         <option value="$PROJECT_DIR$/codeforces_importer/submission_list_importer.py" />
-        <option value="$PROJECT_DIR$/codeforces_importer/classifier/classifier.py" />
         <option value="$PROJECT_DIR$/codeforces_importer/importer.py" />
         <option value="$PROJECT_DIR$/codeforces_importer/cfi_ignore.py" />
+        <option value="$PROJECT_DIR$/codeforces_importer/source_code_extractor.py" />
+        <option value="$PROJECT_DIR$/codeforces_importer/classifier/classifier.py" />
+        <option value="$PROJECT_DIR$/codeforces_importer/classifier/html_generator.py" />
+        <option value="$PROJECT_DIR$/codeforces_importer/classifier/templates/index.html" />
       </list>
     </option>
   </component>
@@ -209,6 +324,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Project Files" />
+      </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -283,16 +403,11 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Project Files" />
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main.py" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
@@ -331,6 +446,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CodeforcesImporter" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="urlBuilder" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/codeforces_importer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CodeforcesImporter" />
+      <option name="SCRIPT_NAME" value="F:\CodeforcesImporter\codeforces_importer\urlbuilder.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -457,14 +589,16 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.main" />
       <item index="1" class="java.lang.String" itemvalue="Python.main (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.urlBuilder" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="3">
         <item index="0" class="java.lang.String" itemvalue="Python.main (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.main" />
+        <item index="1" class="java.lang.String" itemvalue="Python.urlBuilder" />
+        <item index="2" class="java.lang.String" itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -494,42 +628,42 @@
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14626865" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15712188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34542587" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34477124" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32492113" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1566618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1566618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32492113" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -617,7 +751,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -696,7 +830,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -769,7 +903,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -812,7 +946,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -846,7 +980,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -865,93 +999,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codeforces_importer/urlgen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="87" selection-start-line="13" selection-start-column="87" selection-end-line="13" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codeforces_importer/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codeforces_importer/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codeforces_importer/importer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="25" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codeforces_importer/classifier/html_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codeforces_importer/source_code_extractor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codeforces_importer/submission_list_importer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codeforces_importer/classifier/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codeforces_importer/classifier/classifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codeforces_importer/file_io.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -960,7 +1011,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -973,10 +1024,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/codeforces_importer/urlgen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeforces_importer/submission_list_importer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeforces_importer/source_code_extractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeforces_importer/importer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeforces_importer/file_io.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeforces_importer/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/codeforces_importer/cfi_ignore.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42894056">
+        <state vertical-scroll-proportion="0.0">
           <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeforces_importer/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeforces_importer/classifier/classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeforces_importer/classifier/html_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeforces_importer/classifier/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7348703">
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
           <folding />
         </state>
       </provider>
