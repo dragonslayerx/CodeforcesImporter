@@ -1,0 +1,7 @@
+('c:\\python27\\lib\\site-packages\\requests-2.9.1-py2.7.egg',
+ None,
+ set(['*.py', '*.pyc', '*.pyd', '*.pyo', '*.so', 'EGG-INFO']),
+ 'DATA',
+ [('requests\\cacert.pem',
+   'c:\\python27\\lib\\site-packages\\requests-2.9.1-py2.7.egg\\requests\\cacert.pem',
+   'DATA')])
