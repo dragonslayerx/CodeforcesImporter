@@ -10,13 +10,14 @@ class Classifier:
 
     def __init__(self):
         self.problem_list = []
+        
         self.problem_tags = {}
         self.problem_index = {}
         self.problem_link = {}
         self.submission_link ={}
         self.local_path_link ={}
 
-    def add_to_classifier(self, problem, submission_id, local_path):
+    def add(self, problem, submission_id, relative_path):
         """Adds a problem and submission details to Classifier."""
 
         problem_url = urlgen.generate_problem_url(problem.contest_id, problem.index)
@@ -31,4 +32,4 @@ class Classifier:
         self.problem_index[problem.name] = str(problem.contest_id) + '-' + problem.index
         self.problem_link[problem.name] = problem_url
         self.submission_link[problem.name] = submission_url
-        self.local_path_link[problem.name] = local_path
+        self.local_path_link[problem.name] = relative_path

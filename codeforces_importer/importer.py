@@ -6,13 +6,33 @@ from Entity.Submission import log_submission
 from submission_list_importer import SubmissionImport
 
 
+def get_problem_details(submission):
+    """Extracts problem identifier and name from submission and returns it"""
+
+    # generates problem_id
+    problem_id = str(submission.contest_id) + submission.problem.index
+    # generates problem_name
+    problem_name = resolve(submission.problem.name)
+    return problem_id, problem_name
+
+
+def get_file_name(problem_id, problem_name):
+    """Generate desired file_name for problem and returns it"""
+
+    # path of local file where submission has to be saved
+    file_name = problem_id + '-' + problem_name + '.txt'
+    return file_name
+
+
+def resolve(problem_name):
+    """Removes symbols from problem_name inappropriate for file-name"""
+
+    problem_name = problem_name.replace('/', '').replace('\\', '').replace(' ', '_');
+    return problem_name
+
+
 def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
     """Calls modules to import user-submissions-list, extract source-code, adding problems to classifier and write to file.
-
-    Imports user's-submissions-list using Codeforces API.
-    Extracts source-code using lxml library.
-    Adds problems and associated tags to Classifier.
-    Writes source-code to file.
 
     :param handle: user's handle whose submissions are to be imported
     :param dir_path: local directory path where submissions are saved
@@ -20,50 +40,51 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
     """
 
     try:
+        # fetch user's submissions-list using Codeforces API
         importer = SubmissionImport(handle, max_sub_lim)
-        try:
-            # fetch user's submissions-list using Codeforces API
-            submissions_list = importer.get_submissions()
+        submissions_list = importer.get_submissions()
 
-            if submissions_list is not None:
-                # instance of classifier for storing problem_name, associated_tags information
-                classifier = Classifier()
+        if submissions_list is not None:
 
-                for submission in submissions_list:
-                    try:
-                        # print details about the submission
-                        log_submission(submission)
+            # instance of classifier for storing problem_name, associated_tags information
+            classifier = Classifier()
 
-                        # extracts the source code at the submission id
-                        code = source_code_extractor.extract_source_code(str(submission.contest_id), str(submission.id));
+            for submission in submissions_list:
+                try:
 
-                        # generates problem_id
-                        problem_id = str(submission.contest_id) + submission.problem.index
+                    # print submission_details
+                    log_submission(submission)
 
-                        # generates problem_name
-                        problem_name = submission.problem.name
-                        problem_name = resolve(problem_name);
+                    # get problem_details
+                    problem_id, problem_name = get_problem_details(submission)
 
-                        # path of local file where submission has to be saved
-                        path = dir_path + '\\' + problem_id + '-' + problem_name + '.txt'
+                    # file path for cloned file
+                    file_name = get_file_name(problem_id, problem_name)
+                    absolute_path = dir_path + '//' + file_name
+                    relative_path = './/' + file_name
 
-                        # adds problem to classifier
-                        classifier.add_to_classifier(submission.problem, submission.id, path);
+                    # adds problem to classifier
+                    classifier.add(submission.problem, submission.id, relative_path)
 
-                        # writing submission to file
-                        file_io.write_to_file(path, code);
+                    # extracts the source code at the submission id
+                    code = source_code_extractor.extract_source_code(str(submission.contest_id), str(submission.id))
 
-                        print 'Successfully written submission: ' + str(submission.id) + ' to ' + path
-                        print ''
+                    # writing submission to file
+                    file_io.write_to_file(absolute_path, code)
 
-                    except Exception as ex:
-                        print ex.message
+                    print 'Successfully written submission: ' + str(submission.id) + ' to ' + absolute_path
+                    print ''
 
+                # ignore any exception in parsing source_code
+                except Exception as ex:
+                    print ex.message
+
+            try:
                 # generates html file
                 html_generator.generate_html(handle, classifier, dir_path)
-
-        except Exception as ex:
-            raise ex
+            except Exception as ex:
+                print ex.message
+                print 'Error generating html file'
 
     except Exception as ex:
         print 'Error: ' + ex.message
@@ -71,9 +92,3 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
 
     else:
         print 'Import-Status: Successful.'
-
-
-def resolve(problem_name):
-    problem_name = problem_name.replace('/', '').replace('\\', '').replace(' ', '_');
-    return problem_name
-
