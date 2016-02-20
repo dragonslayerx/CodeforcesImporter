@@ -5,6 +5,7 @@ WRITE_FLAGS = os.O_CREAT | os.O_WRONLY
 
 class CfiIgnore:
     """ CfiIgnore reads cfiignore file in dir_path directory. Ignore submission if id present in cfiignore"""
+    CFI_IGNORE_FILENAME = '\cfiignore'
 
     def __init__(self, dir_path):
         self.ignore_list = []
@@ -29,7 +30,7 @@ class CfiIgnore:
         """Reads ignore list from cfiignore file in dir_path directory"""
 
         try:
-            file_path = self.dir_path + '\cfiignore'
+            file_path = self.dir_path + self.CFI_IGNORE_FILENAME
             with open(file_path, 'r') as ignore_file:
                 content = str(ignore_file.read(1000000))
                 self.ignore_list = content.split(';')
@@ -41,7 +42,7 @@ class CfiIgnore:
         """Writes ignore list to cfiignore file in dir_path directory"""
 
         try:
-            file_path = self.dir_path + '\cfiignore'
+            file_path = self.dir_path + self.CFI_IGNORE_FILENAME
             file_handle = os.open(file_path, WRITE_FLAGS)
             with os.fdopen(file_handle, 'w') as file_obj:
                 for identifier in self.ignore_list:

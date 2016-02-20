@@ -27,7 +27,7 @@ class Classifier:
 
         # add to all the tags
         for tag in problem.tags:
-            self.problem_tags.setdefault(tag, []).append(problem.name)
+            self.problem_tags.setdefault(tag, {}).add(problem.name)
 
         self.problem_index[problem.name] = str(problem.contest_id) + '-' + problem.index
         self.problem_link[problem.name] = problem_url
