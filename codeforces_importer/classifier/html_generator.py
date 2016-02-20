@@ -1,4 +1,3 @@
-import sys
 import os
 from jinja2 import Environment, FileSystemLoader
 from CodeforcesImporter.codeforces_importer import urlgen
@@ -16,12 +15,6 @@ def render_template(template_filename, context):
 
 
 def generate_html(handle, classifier, dir_path):
-    """Creates a html page for classified problems"""
-
-    create_index_html(handle, classifier, dir_path)
-
-
-def create_index_html(handle, classifier, dir_path):
     """Creates a html page for classified problems"""
 
     try:

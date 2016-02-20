@@ -48,22 +48,22 @@ class SubmissionImport:
             raise RequestFailureException('Request Failed');
 
     @staticmethod
-    def parse(submission_dict):
-        """Parses submission_dict and returns a Submission instance.
+    def parse(submission_json):
+        """Parses submission_json and returns a Submission instance.
 
-        :param submission_dict: dict object to be parsed
+        :param submission_json: json to be parsed
         :return: Submission
         """
 
         submission = Submission()
-        if 'id' in submission_dict:
-            submission.set_id(submission_dict['id'])
-        if 'contestId' in submission_dict:
-            submission.set_contest_id(submission_dict['contestId'])
-        if 'problem' in submission_dict:
-            submission.set_problem(Problem(submission_dict['problem']));
-        if 'verdict' in submission_dict:
-            submission.set_verdict(submission_dict['verdict'])
+        if 'id' in submission_json:
+            submission.set_id(submission_json['id'])
+        if 'contestId' in submission_json:
+            submission.set_contest_id(submission_json['contestId'])
+        if 'problem' in submission_json:
+            submission.set_problem(Problem(submission_json['problem']));
+        if 'verdict' in submission_json:
+            submission.set_verdict(submission_json['verdict'])
         return submission
 
     def get_submissions(self):
