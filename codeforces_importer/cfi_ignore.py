@@ -44,8 +44,9 @@ class CfiIgnore:
         try:
             file_path = self.dir_path + self.CFI_IGNORE_FILENAME
             file_handle = os.open(file_path, WRITE_FLAGS)
-            with os.fdopen(file_handle, 'w') as file_obj:
+            with os.fdopen(file_handle, 'w+') as file_obj:
                 for identifier in self.ignore_list:
                     file_obj.write(identifier)
+                    file_obj.write(';')
         except (OSError, IOError) as ex:
             print ex.message
