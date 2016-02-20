@@ -1,9 +1,10 @@
 import file_io
 import source_code_extractor
-from CodeforcesImporter.codeforces_importer.classifier.classifier import Classifier
-from CodeforcesImporter.codeforces_importer.classifier import html_generator
+from codeforces_importer.classifier.classifier import Classifier
+from codeforces_importer.classifier import html_generator
 from Entity.Submission import log_submission
 from submission_list_importer import SubmissionImport
+from cfi_ignore import CfiIgnore
 
 
 def get_problem_details(submission):
@@ -43,6 +44,10 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
         # fetch user's submissions-list using Codeforces API
         importer = SubmissionImport(handle, max_sub_lim)
         submissions_list = importer.get_submissions()
+        print 'Fetching submission list: Success'
+
+        # read cfiignore file in the dir_path directory and ignores pre-fetched submissions
+        cfi_ignore = CfiIgnore(dir_path);
 
         if submissions_list is not None:
 
@@ -66,13 +71,23 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
                     # adds problem to classifier
                     classifier.add(submission.problem, submission.id, relative_path)
 
-                    # extracts the source code at the submission id
-                    code = source_code_extractor.extract_source_code(str(submission.contest_id), str(submission.id))
+                    # check if the submission is pre-fetched
+                    if cfi_ignore.ignore(problem_id) is False:
 
-                    # writing submission to file
-                    file_io.write_to_file(absolute_path, code)
+                        # extracts the source code at the submission id
+                        code = source_code_extractor.extract_source_code(str(submission.contest_id), str(submission.id))
 
-                    print 'Successfully written submission: ' + str(submission.id) + ' to ' + absolute_path
+                        # writing submission to file
+                        file_io.write_to_file(absolute_path, code)
+
+                        # add problem to ignore-list so that it is not fetched next time
+                        cfi_ignore.add(problem_id)
+
+                        print 'Successfully written submission: ' + str(submission.id) + ' to ' + absolute_path
+
+                    else:
+                        print 'ignoring submission. cfiignore suggests it has been fetched earlier'
+
                     print ''
 
                 # ignore any exception in parsing source_code
@@ -82,6 +97,10 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
             try:
                 # generates html file
                 html_generator.generate_html(handle, classifier, dir_path)
+
+                # writes cfi ignore
+                cfi_ignore.write_ignore_list()
+
             except Exception as ex:
                 print ex.message
                 print 'Error generating html file'

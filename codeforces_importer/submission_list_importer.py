@@ -81,15 +81,15 @@ class SubmissionImport:
             sys.exit(1)
         else:
             # parsing json response.result for submission information
-            for submission_dict in response['result']:
-                submission = SubmissionImport.parse(submission_dict);
+            for submission_json in response['result']:
+                submission = SubmissionImport.parse(submission_json);
                 # add only 'Accepted' submissions
                 if submission.verdict == 'OK':
                     self.submissions.append(submission)
             return self.submissions
 
 
-class RequestFailureException:
+class RequestFailureException(Exception):
     """Exception to be raised when request to Codeforces API fails."""
 
     def __init__(self, message):

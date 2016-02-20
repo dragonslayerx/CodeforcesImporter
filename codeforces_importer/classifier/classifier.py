@@ -1,4 +1,5 @@
-from CodeforcesImporter.codeforces_importer import urlgen
+from collections import defaultdict
+from codeforces_importer import urlgen
 
 
 class Classifier:
@@ -11,7 +12,7 @@ class Classifier:
     def __init__(self):
         self.problem_list = []
         
-        self.problem_tags = {}
+        self.problem_tags = defaultdict(set)
         self.problem_index = {}
         self.problem_link = {}
         self.submission_link ={}
@@ -27,7 +28,7 @@ class Classifier:
 
         # add to all the tags
         for tag in problem.tags:
-            self.problem_tags.setdefault(tag, []).append(problem.name)
+            self.problem_tags[tag].add(problem.name)
 
         self.problem_index[problem.name] = str(problem.contest_id) + '-' + problem.index
         self.problem_link[problem.name] = problem_url
