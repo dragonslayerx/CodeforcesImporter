@@ -16,7 +16,6 @@ def render_template(template_filename, context):
 
 def generate_html(handle, classifier, dir_path):
     """Creates a html page for classified problems"""
-
     try:
         output_html = dir_path+"\classified-problems.html"
 
@@ -31,7 +30,8 @@ def generate_html(handle, classifier, dir_path):
             'index': classifier.problem_index,
             'submission_count': len(classifier.problem_list),
             'handle': handle,
-            'handle_link': urlgen.generate_profile_url(handle)
+            'handle_link': urlgen.generate_profile_url(handle),
+            'category_counter': classifier.category_count
         }
 
         # writes the html file to classified-problems.html
