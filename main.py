@@ -1,4 +1,3 @@
-import sys
 import codeforces_importer.importer
 import sys
 import os

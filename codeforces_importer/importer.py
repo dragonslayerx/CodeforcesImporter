@@ -97,11 +97,11 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
                     else:
                         print 'ignoring submission. cfiignore suggests it has been fetched earlier'
 
-                    print ''
-
                 # ignore any exception in parsing source_code
                 except Exception as ex:
                     print ex.message
+
+                print ''
 
             try:
                 # generates html file
