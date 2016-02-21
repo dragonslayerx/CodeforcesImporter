@@ -45,11 +45,11 @@ Initial version includes categorization of problems, fetching local copy of Code
 
 Generated template opened in browser showing user statistics
 
-![Alt text](/./screenshots/screenshot1.jpg?raw=true "ScreenShot1")
+![Alt text](/./screenshots/screenshot1.PNG?raw=true "ScreenShot1")
  
 Generated template opened in browser providing links to submissions along with their problem links
 
-![Alt text](/./screenshots/screenshot2.jpg?raw=true "ScreenShot2")
+![Alt text](/./screenshots/screenshot2.PNG?raw=true "ScreenShot2")
 
 ## Latest Releases?  
 
