@@ -1,6 +1,6 @@
 import os
 from jinja2 import Environment, FileSystemLoader
-from CodeforcesImporter.codeforces_importer import urlgen
+from codeforces_importer import urlgen
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE_ENVIRONMENT = Environment(

@@ -1,4 +1,4 @@
-from CodeforcesImporter.codeforces_importer import urlgen
+from codeforces_importer import urlgen
 
 
 class Classifier:

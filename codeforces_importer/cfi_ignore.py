@@ -1,3 +1,8 @@
+import os
+
+WRITE_FLAGS = os.O_CREAT | os.O_WRONLY
+
+
 class CfiIgnore:
     """ CfiIgnore reads cfiignore file in dir_path directory. Ignore submission if id present in cfiignore"""
 
@@ -7,7 +12,8 @@ class CfiIgnore:
         self.fetch_ignore_list()
 
     def ignore(self, problem_id):
-        """Returns true if problem_id is already present in cfiignore
+        """Returns True if problem_id is already present in cfiignore
+
         :param problem_id: problem-id to be checked for in cfiignore
         :return: True or False
         """
@@ -36,8 +42,9 @@ class CfiIgnore:
 
         try:
             file_path = self.dir_path + '\cfiignore'
-            with open(file_path, 'w') as ignore_file:
+            file_handle = os.open(file_path, WRITE_FLAGS)
+            with os.fdopen(file_handle, 'w') as file_obj:
                 for identifier in self.ignore_list:
-                    ignore_file.write(identifier + ';')
+                    file_obj.write(identifier)
         except (OSError, IOError) as ex:
             print ex.message

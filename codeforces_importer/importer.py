@@ -1,10 +1,11 @@
 import file_io
 import source_code_extractor
-from CodeforcesImporter.codeforces_importer.classifier.classifier import Classifier
-from CodeforcesImporter.codeforces_importer.classifier import html_generator
+from codeforces_importer.classifier.classifier import Classifier
+from codeforces_importer.classifier import html_generator
 from Entity.Submission import log_submission
 from submission_list_importer import SubmissionImport
 from cfi_ignore import CfiIgnore
+
 
 def get_problem_details(submission):
     """Extracts problem identifier and name from submission and returns it"""
@@ -80,6 +81,7 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
 
                         # add problem to ignore-list so that it is not fetched next time
                         cfi_ignore.add(problem_id)
+
                         print 'Successfully written submission: ' + str(submission.id) + ' to ' + absolute_path
 
                     else:
