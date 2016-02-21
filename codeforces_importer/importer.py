@@ -32,6 +32,15 @@ def resolve(problem_name):
     return problem_name
 
 
+def is_gym(problem_id):
+    """Checks if the problem belongs to a gym contest. If True, gym problems are usually unclassified and sols aren't public
+
+    Assumption: gym contest_id is typically 6 characters in length
+    """
+
+    return len(problem_id) >= 6
+
+
 def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
     """Calls modules to import user-submissions-list, extract source-code, adding problems to classifier and write to file.
 
@@ -72,7 +81,7 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
                     classifier.add(submission.problem, submission.id, relative_path)
 
                     # check if the submission is pre-fetched
-                    if cfi_ignore.ignore(problem_id) is False:
+                    if cfi_ignore.ignore(problem_id) is False and is_gym(problem_id) is False:
 
                         # extracts the source code at the submission id
                         code = source_code_extractor.extract_source_code(str(submission.contest_id), str(submission.id))
