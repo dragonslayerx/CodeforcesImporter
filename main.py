@@ -2,9 +2,9 @@ import sys
 import codeforces_importer.importer
 import sys
 import os
+
 def ensure_dir(directory):
     d = os.path.dirname(directory)
-    print d
     if not os.path.exists(directory):
         os.mkdir(directory)
 
