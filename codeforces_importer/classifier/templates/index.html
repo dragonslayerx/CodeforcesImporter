@@ -1,67 +1,62 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="utf-8"/>
-        <title>Submission Classifier</title>
-    </head>
-        <center>
-            <h1>Submission Classifier</h1>
-             <h3>
-                 <b>Handle:</b>  <a href="{{ handle_link }}"> {{ handle }} </a>
-             </h3>
-            <h3><b>Total-Submissions:</b> {{ submission_count }}</h3>
-        </center>
-        <center>
-            <table width = "30%">
+<head>
+    <meta charset="utf-8"/>
+    <title>Submission Classifier</title>
+    <link href='https://fonts.googleapis.com/css?family=Catamaran:100' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-                <th align="left"> <h2> Category </h2> </th>
-                <th align="center"> <h2> Submissions </h2></th>
-
+<body>
+    <div id="mainContent">
+        <div id="title">
+            <span>SUBMISSION CLASSIFIER</span>
+            <span>
+                Handle:  <a class="handleLink" target="_blank" href="{{ handle_link }}"> {{ handle }} </a>
+            </span>
+        </div>
+        <div class="tagDiv details">
+            <span>Total-Submissions: {{ submission_count }}</span>
                 {% set counter = 0 -%}
                 {% for tag in category -%}
-                    <tr >
-                        <td> <i>  {{ tag }} </i> :  </td>
-                        <td><center> {{  category_counter[tag] }} </center></td>
-                    </tr>
+                    <div class="detailsRow">
+                        <div style="float: left; width: 50px; height: 10px"></div>
+                        <span class="sh1">   {{ tag.upper() }}  </span>
+                        <span class="sh2"> : &nbsp; {{  category_counter[tag] }}</span>
+                        <div style="float: right; width: 50px; height: 10px"></div>
+                    </div>
                 {% set counter = counter + 1 -%}
                 {% endfor -%}
-            </table>
-        </center>
-        <br>
-        <hr>
-        <br>
-        <ul align="left">
-        {% set counter = 0 -%}
-        {% for tag in category -%}
-            <li><h2>{{ tag }}</h2></li>
-            <table width="100%">
-                <th align="left">Problem</th>
-                <th align="left">Problem-Name</th>
-                <th align="left">Submission-Link</th>
-                <th align="left">Local-Link</th>
+        </div>
+    </div>
+
+    {% set counter = 0 -%}
+    {% for tag in category -%}
+
+        <div class="tagDiv">
+            <div class="header">
+                {{ tag.upper() }}
+            </div>
+                <div class="problemDiv">
+                    <span class="ch1">Problem</span>
+                    <span class="ch2">Problem-Name</span>
+                    <span class="ch3">Submission-Link</span>
+                    <span class="ch4">Local-Link</span>
+                </div>
                 {% set counter = 0 -%}
                 {% for name in category[tag] -%}
-                        <tr width = "100%">
-                            <td width = "10%">
-                               <b><i><a href="{{ links[name] }} "> {{ index[name] }} </a></i></td><b>
-                            </td>
-                            <td width = "30%">
-                               <b><a href="{{ links[name] }} "> {{ name }} </a></b>
-                            </td>
-                            <td width = "30%">
-                               <i><a href="{{ submission[name] }}"> Submission-link </a></i>
-                            </td>
-                            <td width = "30%">
-                               <i><a href="{{ local[name] }}"> Local-link </a></i>
-                            </td>
-                        </tr>
+                        <div class="problemDiv">
+                                   <a class="ch1" target="_blank" href="{{ links[name] }} "> {{ index[name] }} </a>
+                                   <a class="ch2" target="_blank" href="{{ links[name] }} "> {{ name }} </a>
+                                   <a class="ch3" target="_blank" href="{{ submission[name] }}"> Submission-link </a>
+                                   <a class="ch4" target="_blank" href="{{ local[name] }}"> Local-link </a>
+                        </div>
                     {% set counter = counter + 1 -%}
                 {% endfor -%}
-                </table>
-            <br>
-        {% set counter = counter + 1 -%}
-        {% endfor -%}
-        </ul>
-    </body>
+            </div>
+        <br>
+    {% set counter = counter + 1 -%}
+    {% endfor -%}
+</body>
 </html>

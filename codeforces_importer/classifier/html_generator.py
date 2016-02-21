@@ -1,6 +1,7 @@
 import os
 from jinja2 import Environment, FileSystemLoader
 from codeforces_importer import urlgen
+import shutil as File
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE_ENVIRONMENT = Environment(
@@ -17,7 +18,7 @@ def render_template(template_filename, context):
 def generate_html(handle, classifier, dir_path):
     """Creates a html page for classified problems"""
     try:
-        output_html = dir_path+"\classified-problems.html"
+        output_html = dir_path + "\classified-problems.html"
 
         # python variables to be mapped with html page
         # see jinja2 library documentation for more help
@@ -39,6 +40,9 @@ def generate_html(handle, classifier, dir_path):
             html = render_template('index.html', context)
             html = html.encode('utf-8')
             output.write(html)
+
+        # copy .css file to output directory
+        File.copy('codeforces_importer/classifier/templates/style.css', dir_path)
 
     except UnicodeEncodeError as ex:
         print ex.message

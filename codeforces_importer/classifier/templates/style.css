@@ -1,0 +1,211 @@
+#mainContent {
+    /*background-color: white;*/
+    display: inline-block;
+    width: 100%;
+    opacity: 0.9;
+    margin: 0;
+    padding: 0;
+
+    z-index: 10;
+}
+
+#title {
+    position: relative;
+    z-index: 20;
+    display: table;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    color: white;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #34495E;
+    border-radius: 2px 2px 0 0;
+    font-size: 15px;
+
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#title span:first-child {
+    font-family: 'Catamaran', sans-serif;
+    font-size: 40px;
+}
+
+#title span {
+    font-family: 'Catamaran', sans-serif;
+    display: table-row;
+}
+
+.tagDiv {
+    position: relative;
+    font-size: 15px;
+    z-index: 11;
+    display: block;
+    margin: 20px;
+    margin-bottom: 0;
+    border-radius: 2px;
+    background: white;
+    opacity: 0.9;
+
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    /*border: 1px solid green;*/
+}
+
+.details {
+    position: relative;
+    margin-top: 0;
+    border-radius: 0 0 2px 2px;
+    z-index: 11;
+    background: white;
+    opacity: 1;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.details span {
+    display: inline-block;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header {
+    display: table;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    color: white;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #34495E;
+    border-radius: 2px 2px 0 0;
+    font-size: 20px;
+}
+
+.problemDiv {
+    font-size: 20px;
+    display: inline-block;
+    position:relative;
+    width: 100%;
+    height: 50px;
+    /*padding-bottom: 10px;*/
+    border-top: 1px solid rgb(240, 240, 240);
+}
+
+.ch1 {
+    width: 10%;
+    left: 0;
+}
+
+.ch2 {
+    width: 30%;
+    left: 10%;
+}
+
+.ch3 {
+    width: 30%;
+    left: 40%;
+}
+
+.ch4 {
+    width: 29%;
+    left: 70%;
+}
+
+.problemDiv a {
+    position: absolute;
+    padding: 0;
+    line-height: 50px;
+    display: inline-block;
+    text-align: center;
+    height: 100%;
+}
+
+.problemDiv span {
+    position: absolute;
+    padding: 0;
+    line-height: 50px;
+    display: inline-block;
+    text-align: center;
+    height: 100%;
+}
+
+.detailsRow {
+    font-size: 14px;
+    display: inline-block;
+    position:relative;
+    width: 100%;
+    height: 30px;
+    background: white;
+    /*padding-bottom: 10px;*/
+    text-align: center;
+    border: 0;
+}
+
+.detailsRow span {
+    /*position: absolute;*/
+    font-family: 'Catamaran', sans-serif;
+    font-size: 20px;
+    padding: 0;
+    line-height: 30px;
+    display: inline-block;
+    text-align: center;
+    height: 100%;
+}
+
+.detailsRow .sh1 {
+    text-align: left;
+    /*float: left;*/
+    width: 300px;
+    /*left: 0;*/
+}
+
+.detailsRow .sh2 {
+    text-align: left;
+    width: 75px;
+}
+
+a:link, a:visited, a:active {
+    color: #2962C2;
+    text-decoration: none;
+}
+
+a:hover {
+    /*text-decoration: underline;*/
+}
+
+
+.handleLink:link, .handleLink:visited, .handleLink:active {
+    font-family: 'Catamaran', sans-serif;
+    font-size: 25px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.handleLink:hover {
+    text-decoration: underline;
+}
+
+body {
+    /*font-family: Tahoma;*/
+    font-family: 'Catamaran', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url('https://graygrids.com/demos/snippets/startup-fw-pricing-table/assets/img/bg.jpg');
+}
+
+*{
+    padding:0;
+    margin:0;
+}
