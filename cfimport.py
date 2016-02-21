@@ -10,7 +10,7 @@ def ensure_dir_creation(directory):
         try:
             os.mkdir(directory)
         except OSError as ex:
-            print ex.message
+            print ex.strerror
             sys.exit(1)
 
 
