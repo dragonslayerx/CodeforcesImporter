@@ -2,7 +2,7 @@
 CFImporter helps competitive coders to import their Codeforces submissions' source-codes and categorize them based on problem tags.
 
 ## Developed by:
-Swapnil Saxena and Ayush Awasthi. 
+Swapnil Saxena, Ashish Chauhan and Ayush Awasthi. 
 
 Everyone is welcome to introduce changes, add features, fix bugs and to distribute the project without any consent from the creator.  
 
@@ -35,24 +35,21 @@ requests library (http://docs.python-requests.org/en/master/)
 
 template engine (http://jinja.pocoo.org)
 
-lxml (lxml.de)
+lxml (http://lxml.de)
  
 ### Version:  1.0
 
 Initial version includes categorization of problems, fetching local copy of Codeforces submissions and generating HTML page providing appropiate links.
-### How does it look like? ###
 
-Intial screen after after executing the screen asks for user handle on codeforces along with directory to fetch submissions 
- 
-![Alt text](/./screenshots/screenshot1.jpg?raw=true "ScreenShot1")
+### How does it look like? ###
 
 Generated template opened in browser showing user statistics
 
-![Alt text](/./screenshots/screenshot2.jpg?raw=true "ScreenShot2")
+![Alt text](/./screenshots/screenshot1.jpg?raw=true "ScreenShot1")
  
 Generated template opened in browser providing links to submissions along with their problem links
 
-![Alt text](/./screenshots/screenshot3.jpg?raw=true "ScreenShot3")
+![Alt text](/./screenshots/screenshot2.jpg?raw=true "ScreenShot2")
 
 ## Latest Releases?  
 
@@ -61,4 +58,4 @@ Generated template opened in browser providing links to submissions along with t
 ### Who do I talk to?
 #### For any queries contact at:
 
-* Swapnil Saxena (swapnilsaxena@live.in) Ayush Awasthi(ayushawasthi04@gmail.com)
+* Ashish Chauhan (meashish@gmail.com), Swapnil Saxena (swapnilsaxena@live.in), Ayush Awasthi(ayushawasthi04@gmail.com)
