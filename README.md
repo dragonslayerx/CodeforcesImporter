@@ -23,6 +23,8 @@ It also generates a HTML page that contain links to problems categorised accordi
 
 Example : <code> python cfimport.py dragonslayerx C:\\\\Users\\\\dragonslayerx\\\\Desktop\\\\log </code>
 
+Note: use python 2.7
+
 Go to the mentioned directory and open classiied_problems.html. Imported submissions resides in the same directory.
 
 ## Special Thanks
@@ -58,4 +60,4 @@ Generated template opened in browser providing links to submissions along with t
 ### Who do I talk to?
 #### For any queries contact at:
 
-* Ashish Chauhan (meashish@gmail.com), Swapnil Saxena (swapnilsaxena@live.in), Ayush Awasthi(ayushawasthi04@gmail.com)
+* Ashish Chauhan (me.ashishchauhan@gmail.com), Swapnil Saxena (swapnilsaxena@live.in), Ayush Awasthi(ayushawasthi04@gmail.com)
