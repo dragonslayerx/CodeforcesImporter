@@ -44,8 +44,8 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
 
                     # file path for cloned file
                     file_name = get_file_name(problem_id, problem_name)
-                    absolute_path = dir_path + '//' + file_name
-                    relative_path = './/' + file_name
+                    absolute_path = os.path.join(dir_path, file_name)
+                    relative_path = os.path.join('.//', file_name)
 
                     # adds problem to classifier
                     classifier.add(submission.problem, submission.id, relative_path)

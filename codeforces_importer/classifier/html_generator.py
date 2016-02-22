@@ -3,6 +3,8 @@ from jinja2 import Environment, FileSystemLoader
 from codeforces_importer import urlgen
 import shutil as File
 
+WRITE_FLAGS = os.O_CREAT | os.O_WRONLY
+
 PATH = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE_ENVIRONMENT = Environment(
     autoescape=False,
@@ -18,7 +20,8 @@ def render_template(template_filename, context):
 def generate_html(handle, classifier, dir_path):
     """Creates a html page for classified problems"""
     try:
-        output_html = dir_path + "\classified-problems.html"
+        output_html = os.path.join(dir_path, "classified-problems.html")
+        file_handle = os.open(output_html, WRITE_FLAGS)
 
         # python variables to be mapped with html page
         # see jinja2 library documentation for more help
@@ -36,7 +39,7 @@ def generate_html(handle, classifier, dir_path):
         }
 
         # writes the html file to classified-problems.html
-        with open(output_html, 'w') as output:
+        with os.fdopen(file_handle, 'w') as output:
             html = render_template('index.html', context)
             html = html.encode('utf-8')
             output.write(html)
@@ -46,5 +49,8 @@ def generate_html(handle, classifier, dir_path):
 
     except UnicodeEncodeError as ex:
         print ex.message
-    except (OSError, IOError) as ex:
+    except OSError as ex:
+        print ex.strerror
+    except IOError as ex:
         print ex.message
+
