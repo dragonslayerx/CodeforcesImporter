@@ -30,8 +30,8 @@ def generate_html(handle, classifier, dir_path):
             'links': classifier.problem_link,
             'category': classifier.problem_tags,
             'submission': classifier.submission_link,
-            'local': classifier.local_path_link,
-            'index': classifier.problem_index,
+            'local': classifier.local_link,
+            'index': classifier.problem_id,
             'submission_count': len(classifier.problem_list),
             'handle': handle,
             'handle_link': urlgen.generate_profile_url(handle),
@@ -49,8 +49,6 @@ def generate_html(handle, classifier, dir_path):
 
     except UnicodeEncodeError as ex:
         print ex.message
-    except OSError as ex:
+    except (OSError, IOError) as ex:
         print ex.strerror
-    except IOError as ex:
-        print ex.message
 

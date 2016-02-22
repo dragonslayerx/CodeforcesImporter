@@ -15,14 +15,16 @@ class Submission:
         self.verdict = verdict
 
     def __init__(self, submission_json):
-            if 'id' in submission_json:
-                self.set_id(submission_json['id'])
-            if 'contestId' in submission_json:
-                self.set_contest_id(submission_json['contestId'])
-            if 'problem' in submission_json:
-                self.set_problem(Problem.Problem(submission_json['problem']));
-            if 'verdict' in submission_json:
-                self.set_verdict(submission_json['verdict'])
+        """Creates a submission instance by parsing submission_json"""
+
+        if 'id' in submission_json:
+            self.set_id(submission_json['id'])
+        if 'contestId' in submission_json:
+            self.set_contest_id(submission_json['contestId'])
+        if 'problem' in submission_json:
+            self.set_problem(Problem.Problem(submission_json['problem']));
+        if 'verdict' in submission_json:
+            self.set_verdict(submission_json['verdict'])
 
     def set_id(self, id):
         self.id = id;
@@ -36,13 +38,12 @@ class Submission:
     def set_verdict(self, verdict):
         self.verdict = verdict
 
+    def log(self):
+        """Prints submissions details."""
 
-def log_submission(submission):
-    """Prints submissions details."""
-
-    print "[",
-    print 'id = ' + str(submission.contest_id) + submission.problem.index + ', ',
-    print 'name = ' + submission.problem.name + ', ',
-    print 'verdict = ' + submission.verdict + ', ',
-    print 'submission_id=' + str(submission.id),
-    print "]"
+        print "[",
+        print 'id = ' + str(self.contest_id) + self.problem.index + ', ',
+        print 'name = ' + self.problem.name + ', ',
+        print 'verdict = ' + self.verdict + ', ',
+        print 'submission_id = ' + str(self.id),
+        print "]"

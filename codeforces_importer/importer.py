@@ -3,7 +3,6 @@ import file_io
 import source_code_extractor
 from codeforces_importer.classifier.classifier import Classifier
 from codeforces_importer.classifier import html_generator
-from Entity.Submission import log_submission
 from submission_list_importer import SubmissionImport
 from cfi_ignore import CfiIgnore
 
@@ -37,7 +36,7 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
                 try:
 
                     # print submission_details
-                    log_submission(submission)
+                    submission.log()
 
                     # get problem_details
                     problem_id, problem_name = get_problem_details(submission)

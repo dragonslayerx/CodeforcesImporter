@@ -12,14 +12,16 @@ class Problem:
         self.tags = tags
 
     def __init__(self, prob_json):
-            if 'contestId' in prob_json:
-                self.contest_id = prob_json['contestId']
-            if 'index' in prob_json:
-                self.index = prob_json['index']
-            if 'name' in prob_json:
-                self.name = prob_json['name']
-            if 'tags' in prob_json:
-                self.tags = prob_json['tags']
+        """Creates a problem instance by parsing prob_json"""
+
+        if 'contestId' in prob_json:
+            self.contest_id = prob_json['contestId']
+        if 'index' in prob_json:
+            self.index = prob_json['index']
+        if 'name' in prob_json:
+            self.name = prob_json['name']
+        if 'tags' in prob_json:
+            self.tags = prob_json['tags']
 
     def set_contest_id(self, contestId):
         self.contest_id = contestId
@@ -32,3 +34,12 @@ class Problem:
 
     def set_tags(self, tags):
         self.tags = tags
+
+    def log(self):
+        """Prints problem details."""
+
+        print "[",
+        print 'id = ' + str(self.contest_id) + self.problem.index + ', ',
+        print 'name = ' + self.name + ', ',
+        print 'verdict = ' + self.tags + ', ',
+        print "]"
