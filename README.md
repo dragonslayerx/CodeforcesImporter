@@ -27,9 +27,19 @@ Note: use python 2.7
 
 Go to the mentioned directory and open classiied_problems.html. Imported submissions resides in the same directory.
 
-## Special Thanks
+### Version:  1.0
 
-We would like to thank Mike Mirzayanov for providing Codeforces API that helped us making this tool.
+Initial version includes categorization of problems, fetching local copy of Codeforces submissions and generating HTML page providing appropiate links.
+
+## Latest Releases?  
+
+Download the latest version from here: https://github.com/dragonslayerx/CodeforcesImporter/releases
+
+## How to Install?
+
+Open the installed source in terminal and type
+
+<code> python setup.py install </code> 
 
 ## External Dependencies
 
@@ -38,10 +48,10 @@ requests library (http://docs.python-requests.org/en/master/)
 template engine (http://jinja.pocoo.org)
 
 lxml (http://lxml.de)
- 
-### Version:  1.0
 
-Initial version includes categorization of problems, fetching local copy of Codeforces submissions and generating HTML page providing appropiate links.
+## Special Thanks
+
+We would like to thank Mike Mirzayanov for providing Codeforces API that helped us making this tool.
 
 ### How does it look like? ###
 
@@ -52,8 +62,6 @@ Generated template opened in browser showing user statistics
 Generated template opened in browser providing links to submissions along with their problem links
 
 ![Alt text](/./screenshots/screenshot2.PNG?raw=true "ScreenShot2")
-
-## Latest Releases?  
 
 * Introduce changes, add features, fix bugs and send a pull request to contribute. 
 
