@@ -1,3 +1,4 @@
+import os, sys
 import file_io
 import source_code_extractor
 from codeforces_importer.classifier.classifier import Classifier
@@ -5,40 +6,6 @@ from codeforces_importer.classifier import html_generator
 from Entity.Submission import log_submission
 from submission_list_importer import SubmissionImport
 from cfi_ignore import CfiIgnore
-
-
-def get_problem_details(submission):
-    """Extracts problem identifier and name from submission and returns it"""
-
-    # generates problem_id
-    problem_id = str(submission.contest_id) + submission.problem.index
-    # generates problem_name
-    problem_name = resolve(submission.problem.name)
-    return problem_id, problem_name
-
-
-def get_file_name(problem_id, problem_name):
-    """Generate desired file_name for problem and returns it"""
-
-    # path of local file where submission has to be saved
-    file_name = problem_id + '-' + problem_name + '.txt'
-    return file_name
-
-
-def resolve(problem_name):
-    """Removes symbols from problem_name inappropriate for file-name"""
-
-    problem_name = problem_name.replace('/', '').replace('\\', '').replace(' ', '_');
-    return problem_name
-
-
-def is_gym(problem_id):
-    """Checks if the problem belongs to a gym contest. If True, gym problems are usually unclassified and sols aren't public
-
-    Assumption: gym contest_id is typically 6 characters in length
-    """
-
-    return len(problem_id) >= 6
 
 
 def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
@@ -62,6 +29,9 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
 
             # instance of classifier for storing problem_name, associated_tags information
             classifier = Classifier()
+
+            # ensures directory creation
+            ensure_dir_creation(dir_path)
 
             for submission in submissions_list:
                 try:
@@ -120,3 +90,48 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
 
     else:
         print 'Import-Status: Successful.'
+
+
+def ensure_dir_creation(directory):
+    """Ensures directory creation before importing submissions"""
+
+    if not os.path.exists(directory):
+        try:
+            os.mkdir(directory)
+        except OSError as ex:
+            print ex.strerror
+            sys.exit(1)
+
+
+def get_problem_details(submission):
+    """Extracts problem identifier and name from submission and returns it"""
+
+    # generates problem_id
+    problem_id = str(submission.contest_id) + submission.problem.index
+    # generates problem_name
+    problem_name = resolve(submission.problem.name)
+    return problem_id, problem_name
+
+
+def get_file_name(problem_id, problem_name):
+    """Generate desired file_name for problem and returns it"""
+
+    # path of local file where submission has to be saved
+    file_name = problem_id + '-' + problem_name + '.txt'
+    return file_name
+
+
+def resolve(problem_name):
+    """Removes symbols from problem_name inappropriate for file-name"""
+
+    problem_name = problem_name.replace('/', '').replace('\\', '').replace(' ', '_');
+    return problem_name
+
+
+def is_gym(problem_id):
+    """Checks if the problem belongs to a gym contest. If True, gym problems are usually unclassified and sols aren't public
+
+    Assumption: gym contest_id is typically 6 characters in length
+    """
+
+    return len(problem_id) >= 6

@@ -1,17 +1,5 @@
 import codeforces_importer.importer
 import sys
-import os
-
-
-def ensure_dir_creation(directory):
-    """Ensures directory creation before importing submissions"""
-
-    if not os.path.exists(directory):
-        try:
-            os.mkdir(directory)
-        except OSError as ex:
-            print ex.strerror
-            sys.exit(1)
 
 
 argc = len(sys.argv)
@@ -28,7 +16,6 @@ else:
 
 if handle is not None and dir_path is not None:
     print 'Importing submissions of ' + handle + ' at ' + dir_path
-    ensure_dir_creation(dir_path)
     codeforces_importer.importer.import_codes(handle, dir_path)
     sys.exit(0)
 else:

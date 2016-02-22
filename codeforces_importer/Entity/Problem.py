@@ -11,11 +11,15 @@ class Problem:
         self.name = name
         self.tags = tags
 
-    def __init__(self, prob_dict):
-            self.contest_id = prob_dict['contestId']
-            self.index = prob_dict['index']
-            self.name = prob_dict['name']
-            self.tags = prob_dict['tags']
+    def __init__(self, prob_json):
+            if 'contestId' in prob_json:
+                self.contest_id = prob_json['contestId']
+            if 'index' in prob_json:
+                self.index = prob_json['index']
+            if 'name' in prob_json:
+                self.name = prob_json['name']
+            if 'tags' in prob_json:
+                self.tags = prob_json['tags']
 
     def set_contest_id(self, contestId):
         self.contest_id = contestId

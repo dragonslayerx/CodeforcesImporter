@@ -1,9 +1,8 @@
 import sys
-from Entity.Problem import Problem
 from urlbuilder import Urlbuilder
 from config import Codeforces
 from config import UserRequestMethod
-from Entity.Submission import Submission
+from Entity.Submission import  Submission
 import httprequest
 
 
@@ -54,16 +53,7 @@ class SubmissionImport:
         :param submission_json: json to be parsed
         :return: Submission
         """
-
-        submission = Submission()
-        if 'id' in submission_json:
-            submission.set_id(submission_json['id'])
-        if 'contestId' in submission_json:
-            submission.set_contest_id(submission_json['contestId'])
-        if 'problem' in submission_json:
-            submission.set_problem(Problem(submission_json['problem']));
-        if 'verdict' in submission_json:
-            submission.set_verdict(submission_json['verdict'])
+        submission = Submission(submission_json)
         return submission
 
     def get_submissions(self):

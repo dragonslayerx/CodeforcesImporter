@@ -1,3 +1,6 @@
+from codeforces_importer.Entity import Problem
+
+
 class Submission:
     """Represents a submission.
 
@@ -10,6 +13,16 @@ class Submission:
         self.contest_id = contest_id
         self.problem = problem
         self.verdict = verdict
+
+    def __init__(self, submission_json):
+            if 'id' in submission_json:
+                self.set_id(submission_json['id'])
+            if 'contestId' in submission_json:
+                self.set_contest_id(submission_json['contestId'])
+            if 'problem' in submission_json:
+                self.set_problem(Problem.Problem(submission_json['problem']));
+            if 'verdict' in submission_json:
+                self.set_verdict(submission_json['verdict'])
 
     def set_id(self, id):
         self.id = id;
