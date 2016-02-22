@@ -19,7 +19,7 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
         # fetch user's submissions-list using Codeforces API
         importer = SubmissionImport(handle, max_sub_lim)
         submissions_list = importer.get_submissions()
-        print 'Fetching submission list: Success'
+        print 'Fetching submission list: Success\n'
 
         # read cfiignore file in the dir_path directory and ignores pre-fetched submissions
         cfi_ignore = CfiIgnore(dir_path);
