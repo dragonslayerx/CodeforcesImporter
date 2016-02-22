@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name='CodeforcesImporter',
     version='v1.0',
-    packages=['', '.idea', 'codeforces_importer', 'codeforces_importer.Entity', 'codeforces_importer.classifier'],
+    packages=['', 'codeforces_importer', 'codeforces_importer.Entity', 'codeforces_importer.classifier'],
     url='https://github.com/dragonslayerx/CodeforcesImporter',
     license='',
     author='dragonslayerx',
