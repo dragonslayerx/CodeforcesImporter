@@ -10,8 +10,9 @@ def send_get_request(url, args=None):
     """
 
     try:
-        response = requests.get(url, args);
-        return response
+        #response = requests.get(url, args);
+        response = requests.get(url);
+	return response
     except requests.exceptions.Timeout:
         print 'Connection Timed Out'
         sys.exit(1)

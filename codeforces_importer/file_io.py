@@ -11,6 +11,7 @@ def write_to_file(file_path, content):
     """
 
     try:
+        print 'writing to file ' + file_path
         file_handle = os.open(file_path, WRITE_FLAGS)
         with os.fdopen(file_handle, 'w') as file_obj:
             file_obj.write(content)
