@@ -49,6 +49,8 @@ template engine (http://jinja.pocoo.org)
 
 lxml (http://lxml.de)
 
+You can download the prebuilt lxml library from here: https://pypi.python.org/pypi/lxml/3.5.0#downloads
+
 ## Special Thanks
 
 We would like to thank Mike Mirzayanov for providing Codeforces API that helped us making this tool.
