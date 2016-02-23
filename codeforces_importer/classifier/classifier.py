@@ -13,10 +13,10 @@ class Classifier:
         self.problem_list = []
         
         self.problem_tags = defaultdict(set)
-        self.problem_index = {}
+        self.problem_id = {}
         self.problem_link = {}
         self.submission_link ={}
-        self.local_path_link ={}
+        self.local_link ={}
         self.category_count = defaultdict(int)
 
     def add(self, problem, submission_id, relative_path):
@@ -32,7 +32,7 @@ class Classifier:
             self.problem_tags[tag].add(problem.name)
             self.category_count[tag] += 1
 
-        self.problem_index[problem.name] = str(problem.contest_id) + '-' + problem.index
+        self.problem_id[problem.name] = str(problem.contest_id) + '-' + problem.index
         self.problem_link[problem.name] = problem_url
         self.submission_link[problem.name] = submission_url
-        self.local_path_link[problem.name] = relative_path
+        self.local_link[problem.name] = relative_path
