@@ -20,11 +20,11 @@
         <div class="tagDiv details">
             <span>Total-Submissions: {{ submission_count }}</span>
                 {% set counter = 0 -%}
-                {% for tag in category -%}
+                {% for tag in sorted_category -%}
                     <div class="detailsRow">
                         <div style="float: left; width: 50px; height: 10px"></div>
-                        <span class="sh1">   {{ tag.upper() }}  </span>
-                        <span class="sh2"> : &nbsp; {{  category_counter[tag] }} out of {{  category_total_counter[tag] }}</span>
+                        <span class="sh1">  <a target="_blank" href="http://codeforces.com/problemset/tags/{{ tag }}"> {{ tag.upper() }} </a>  </span>
+                        <span class="sh2" tagName="{{ tag.replace(' ', '_') }}"> : &nbsp; {{  category_counter[tag] }} out of {{  category_total_counter[tag] }}</span>
                         <span class="sh3">
                             <div class="myProgress">
                                 <div class="myBar" style="width: {{ ((category_counter[tag] * 100.0) / category_total_counter[tag]) }}%">
@@ -40,10 +40,10 @@
     </div>
 
     {% set counter = 0 -%}
-    {% for tag in category -%}
+    {% for tag in sorted_category -%}
 
         <div class="tagDiv">
-            <div class="header">
+            <div class="header" id="{{ tag.replace(' ', '_') }}">
                 {{ tag.upper() }}
             </div>
             <div class="problemDiv">
@@ -113,10 +113,23 @@
             };
         })();
 
+
         /*$(function () {
             stickyHeaders.load($(".header"), $(window), 0);
         });*/
         $(window).bind("load", function() {
+            $.fn.scrollView = function () {
+                return this.each(function () {
+                    $('html, body').animate({
+                        scrollTop: $(this).offset().top
+                    }, 1000);
+                });
+            };
+
+            $('.sh2').on('click', function() {
+                //alert('clicked' + $(this).attr('tagName'));
+                $('#' + $(this).attr('tagName')).scrollView();
+            });
            stickyHeaders.load($(".header"), $(window), 0);
         });
 

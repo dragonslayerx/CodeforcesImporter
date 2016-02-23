@@ -45,3 +45,10 @@ class Classifier:
         """Adds problem to category and increment category count by 1"""
 
         self.category_total_count[tag] += 1;
+
+    def get_sorted_category(self):
+        sorted_category_list = []
+        for category in self.problem_tags:
+            sorted_category_list.append(category)
+        sorted_category_list.sort()
+        return sorted_category_list
