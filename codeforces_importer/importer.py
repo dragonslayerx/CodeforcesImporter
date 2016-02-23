@@ -32,7 +32,10 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
             classifier = Classifier()
 
             # fetch problems from Codeforces API
-            problem_importer.fetch_problems_by_category(classifier);
+            problem_list = problem_importer.fetch_problems_by_category()
+            for problem in problem_list:
+                for tag in problem['tags']:
+                    classifier.add_problem_tag(problem, tag)
 
             # ensures directory creation
             ensure_dir_creation(dir_path)
@@ -128,7 +131,8 @@ def get_file_name(problem_id, problem_name):
 def resolve(problem_name):
     """Removes symbols from problem_name inappropriate for file-name"""
 
-    problem_name = problem_name.replace('/', '').replace('\\', '').replace(' ', '_');
+    problem_name = problem_name.replace('/', '').replace('\\', '').replace(' ', '_').replace(':', '').replace(':','')
+    problem_name = problem_name.replace('?', '').replace('<', '').replace('>', '').replace('"', '').replace('*', '');
     return problem_name
 
 
