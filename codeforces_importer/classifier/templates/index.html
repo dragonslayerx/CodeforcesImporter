@@ -9,8 +9,9 @@
 </head>
 
 <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <div id="mainContent">
-        <div id="title">
+        <div id="title" class="header">
             <span>SUBMISSION CLASSIFIER</span>
             <span>
                 Handle:  <a class="handleLink" target="_blank" href="{{ handle_link }}"> {{ handle }} </a>
@@ -38,25 +39,77 @@
             <div class="header">
                 {{ tag.upper() }}
             </div>
-                <div class="problemDiv">
-                    <span class="ch1">Problem</span>
-                    <span class="ch2">Problem-Name</span>
-                    <span class="ch3">Submission-Link</span>
-                    <span class="ch4">Local-Link</span>
-                </div>
-                {% set counter = 0 -%}
-                {% for name in category[tag] -%}
-                        <div class="problemDiv">
-                                   <a class="ch1" target="_blank" href="{{ links[name] }} "> {{ index[name] }} </a>
-                                   <a class="ch2" target="_blank" href="{{ links[name] }} "> {{ name }} </a>
-                                   <a class="ch3" target="_blank" href="{{ submission[name] }}"> Submission-link </a>
-                                   <a class="ch4" target="_blank" href="{{ local[name] }}"> Local-link </a>
-                        </div>
-                    {% set counter = counter + 1 -%}
-                {% endfor -%}
+            <div class="problemDiv">
+                <span class="ch1">Problem</span>
+                <span class="ch2">Problem-Name</span>
+                <span class="ch3">Submission-Link</span>
+                <span class="ch4">Local-Link</span>
             </div>
-        <br>
+            {% set counter = 0 -%}
+            {% for name in category[tag] -%}
+                    <div class="problemDiv">
+                               <a class="ch1" target="_blank" href="{{ links[name] }} "> {{ index[name] }} </a>
+                               <a class="ch2" target="_blank" href="{{ links[name] }} "> {{ name }} </a>
+                               <a class="ch3" target="_blank" href="{{ submission[name] }}"> Submission-link </a>
+                               <a class="ch4" target="_blank" href="{{ local[name] }}"> Local-link </a>
+                    </div>
+                {% set counter = counter + 1 -%}
+            {% endfor -%}
+        </div>
+
     {% set counter = counter + 1 -%}
     {% endfor -%}
+
+    <script>
+        var stickyHeaders = (function () {
+            var $stickies, $offset;
+            var load = function (stickies, target, offset) {
+                $offset = offset || 0;
+                if (typeof stickies === "object" && stickies instanceof jQuery && stickies.length > 0) {
+                    $stickies = stickies.each(function () {
+                        var $thisSticky = $(this);
+                        $thisSticky
+                                .data('originalPosition', $thisSticky.offset().top)
+                                .data('originalHeight', $thisSticky.outerHeight());
+                    });
+                    target.off("scroll.stickies").on("scroll.stickies", function (event) {
+                        _whenScrolling(event);
+                    });
+                }
+            };
+
+            var _whenScrolling = function (event) {
+                var $scrollTop = $(event.currentTarget).scrollTop() + 0;//$offset;
+                $stickies.each(function (i) {
+                    var $thisSticky = $(this),
+                            $stickyPosition = $thisSticky.data('originalPosition'),
+                            $newPosition,
+                            $nextSticky;
+                    if ($stickyPosition <= $scrollTop) {
+                        $newPosition = Math.max(0, $scrollTop - $stickyPosition);
+                        $nextSticky = $stickies.eq(i + 1);
+                        if ($nextSticky.length > 0) {
+                            $newPosition = Math.min($newPosition, ($nextSticky.data('originalPosition') - $stickyPosition) - $thisSticky.data('originalHeight'));
+                        }
+                    } else {
+                        $newPosition = 0;
+                    }
+                    $thisSticky.css('transform', 'translateY(' + $newPosition + 'px)');
+                    //could just as easily use top instead of transform
+                    //$thisSticky.css('top', $newPosition + 'px');
+                });
+            };
+
+            return {
+                load: load
+            };
+        })();
+
+        $(function () {
+            stickyHeaders.load($(".header"), $(window), 0);
+        });
+
+
+    </script>
 </body>
 </html>
