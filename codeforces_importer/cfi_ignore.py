@@ -37,7 +37,7 @@ class CfiIgnore:
                 content = str(ignore_file.read(1000000))
                 self.ignore_list = content.split(';')
         except (OSError, IOError) as ex:
-            print 'CfiIgnore Error: ' + ex.strerror
+            pass
 
     def write_ignore_list(self):
         """Writes ignore list to cfiignore file in dir_path directory"""

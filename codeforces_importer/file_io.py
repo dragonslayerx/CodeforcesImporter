@@ -13,10 +13,10 @@ def write_to_file(file_path, content):
     try:
         file_handle = os.open(file_path, WRITE_FLAGS)
         with os.fdopen(file_handle, 'w') as file_obj:
-            file_obj.write(content)
+            file_obj.write(content.encode('utf-8'))
     except OSError as ex:
-        print 'Error: ' + ex.strerror
+        print 'Error File I/O: ' + ex.strerror
         raise ex
     except ValueError as ex:
-        print 'Error: ' + ex.message
+        print 'Error File I/O: ' + ex.message
         raise ex

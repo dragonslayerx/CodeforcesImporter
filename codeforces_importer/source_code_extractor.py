@@ -28,7 +28,7 @@ def extract_source_code(contest_id, submission_id):
     try:
         if len(code) > 0:
             # replaces all '\\r\\n' with '\r\n'
-            return fix_eol(str(code[0]));
+            return fix_eol(code[0])
         else:
             # received empty content. unable to extract submission using html parser
             raise ValueError('Empty Content')

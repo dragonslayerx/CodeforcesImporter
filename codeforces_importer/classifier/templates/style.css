@@ -231,7 +231,8 @@ body {
     min-height: 50rem;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-image: url('https://graygrids.com/demos/snippets/startup-fw-pricing-table/assets/img/bg.jpg');
+    /*background-image: url('https://graygrids.com/demos/snippets/startup-fw-pricing-table/assets/img/bg.jpg');*/
+    background-image: url("https://i.ytimg.com/vi/Q3_fuZVyFtY/maxresdefault.jpg");
 }
 
 * {
