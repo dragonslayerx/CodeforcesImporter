@@ -28,6 +28,7 @@ def generate_html(handle, classifier, dir_path):
         context = {
             'names': classifier.problem_list,
             'links': classifier.problem_link,
+            'sorted_category': classifier.get_sorted_category(),
             'category': classifier.problem_tags,
             'submission': classifier.submission_link,
             'local': classifier.local_path_link,

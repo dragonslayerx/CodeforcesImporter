@@ -179,6 +179,7 @@
 .detailsRow .sh2 {
     text-align: left;
     width: 20rem;
+    cursor: pointer;
 }
 
 .detailsRow .sh3 {
