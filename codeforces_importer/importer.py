@@ -1,6 +1,7 @@
 import os, sys
 import file_io
 import source_code_extractor
+import problem_importer
 from codeforces_importer.classifier.classifier import Classifier
 from codeforces_importer.classifier import html_generator
 from submission_list_importer import SubmissionImport
@@ -19,6 +20,7 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
         # fetch user's submissions-list using Codeforces API
         importer = SubmissionImport(handle, max_sub_lim)
         submissions_list = importer.get_submissions()
+
         print 'Fetching submission list: Success\n'
 
         # read cfiignore file in the dir_path directory and ignores pre-fetched submissions
@@ -28,6 +30,9 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
 
             # instance of classifier for storing problem_name, associated_tags information
             classifier = Classifier()
+
+            # fetch problems from Codeforces API
+            problem_importer.fetch_problems_by_category(classifier);
 
             # ensures directory creation
             ensure_dir_creation(dir_path)

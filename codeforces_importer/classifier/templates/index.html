@@ -24,7 +24,14 @@
                     <div class="detailsRow">
                         <div style="float: left; width: 50px; height: 10px"></div>
                         <span class="sh1">   {{ tag.upper() }}  </span>
-                        <span class="sh2"> : &nbsp; {{  category_counter[tag] }}</span>
+                        <span class="sh2"> : &nbsp; {{  category_counter[tag] }} out of {{  category_total_counter[tag] }}</span>
+                        <span class="sh3">
+                            <div class="myProgress">
+                                <div class="myBar" style="width: {{ ((category_counter[tag] * 100.0) / category_total_counter[tag]) }}%">
+
+                                </div>
+                            </div>
+                        </span>
                         <div style="float: right; width: 50px; height: 10px"></div>
                     </div>
                 {% set counter = counter + 1 -%}

@@ -2,7 +2,8 @@ import sys
 from urlbuilder import Urlbuilder
 from config import Codeforces
 from config import UserRequestMethod
-from Entity.Submission import  Submission
+from Entity.Submission import Submission
+from exception import RequestFailureException
 import httprequest
 
 
@@ -78,9 +79,3 @@ class SubmissionImport:
                     self.submissions.append(submission)
             return self.submissions
 
-
-class RequestFailureException(Exception):
-    """Exception to be raised when request to Codeforces API fails."""
-
-    def __init__(self, message):
-        self.message = message

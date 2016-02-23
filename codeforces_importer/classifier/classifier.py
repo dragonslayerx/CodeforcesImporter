@@ -16,8 +16,9 @@ class Classifier:
         self.problem_id = {}
         self.problem_link = {}
         self.submission_link ={}
-        self.local_link ={}
+        self.local_path_link ={}
         self.category_count = defaultdict(int)
+        self.category_total_count = defaultdict(int)
 
     def add(self, problem, submission_id, relative_path):
         """Adds a problem and submission details to Classifier."""
@@ -35,4 +36,4 @@ class Classifier:
         self.problem_id[problem.name] = str(problem.contest_id) + '-' + problem.index
         self.problem_link[problem.name] = problem_url
         self.submission_link[problem.name] = submission_url
-        self.local_link[problem.name] = relative_path
+        self.local_path_link[problem.name] = relative_path
