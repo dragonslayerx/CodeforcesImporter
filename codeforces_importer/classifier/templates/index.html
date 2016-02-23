@@ -105,10 +105,12 @@
             };
         })();
 
-        $(function () {
+        /*$(function () {
             stickyHeaders.load($(".header"), $(window), 0);
+        });*/
+        $(window).bind("load", function() {
+           stickyHeaders.load($(".header"), $(window), 0);
         });
-
 
     </script>
 </body>
