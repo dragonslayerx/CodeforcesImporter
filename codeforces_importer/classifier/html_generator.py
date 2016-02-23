@@ -30,12 +30,13 @@ def generate_html(handle, classifier, dir_path):
             'links': classifier.problem_link,
             'category': classifier.problem_tags,
             'submission': classifier.submission_link,
-            'local': classifier.local_link,
+            'local': classifier.local_path_link,
             'index': classifier.problem_id,
             'submission_count': len(classifier.problem_list),
             'handle': handle,
             'handle_link': urlgen.generate_profile_url(handle),
-            'category_counter': classifier.category_count
+            'category_counter': classifier.category_count,
+            'category_total_counter': classifier.category_total_count
         }
 
         # writes the html file to classified-problems.html
