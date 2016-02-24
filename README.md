@@ -19,7 +19,7 @@ It also generates a HTML page that contain links to problems categorised accordi
 
 ## Usage  
 
-<code> Usage python cfimport.py [-i, --ignore] {handle} {directory_path} </code> 
+Usage: <code>  python cfimport.py [-i, --ignore] {handle} {directory_path} </code> 
 
 Example : 
 
