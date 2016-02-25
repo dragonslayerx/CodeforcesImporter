@@ -6,4 +6,4 @@ def get_extension(prog_lang):
         'GNU C++': 'cpp',
         'Java 8': 'java',
         'Python 2': ',py'
-    }[prog_lang]
+    }.get(prog_lang, 'txt')
