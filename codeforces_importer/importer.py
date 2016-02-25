@@ -6,7 +6,7 @@ from codeforces_importer.classifier.classifier import Classifier
 from codeforces_importer.classifier import html_generator
 from submission_list_importer import SubmissionImport
 from cfi_ignore import CfiIgnore
-
+from get_extension import get_extension
 
 def import_codes(handle, dir_path='.\log\\', fetch_submission_flag=True, max_sub_lim=10000):
     """Calls modules to import user-submissions-list, extract source-code, adding problems to classifier and write to file.
@@ -50,7 +50,7 @@ def import_codes(handle, dir_path='.\log\\', fetch_submission_flag=True, max_sub
                     problem_id, problem_name = get_problem_details(submission)
 
                     # file path for cloned file
-                    file_name = get_file_name(problem_id, problem_name)
+                    file_name = get_file_name(problem_id, problem_name, submission.prog_lang)
                     absolute_path = os.path.join(dir_path, file_name)
                     relative_path = os.path.join('.//', file_name)
 
@@ -123,11 +123,11 @@ def get_problem_details(submission):
     return problem_id, problem_name
 
 
-def get_file_name(problem_id, problem_name):
+def get_file_name(problem_id, problem_name, prog_lang):
     """Generate desired file_name for problem and returns it"""
 
     # path of local file where submission has to be saved
-    file_name = problem_id + '-' + problem_name + '.txt'
+    file_name = problem_id + '-' + problem_name + '.' + get_extension(prog_lang);
     return file_name
 
 

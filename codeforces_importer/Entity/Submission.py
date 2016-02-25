@@ -8,11 +8,12 @@ class Submission:
     See http://codeforces.com/api/help/objects for more help.
     """
 
-    def __init__(self, id=None, contest_id=None, problem=None, verdict=None):
+    def __init__(self, id=None, contest_id=None, problem=None, verdict=None, prog_lang='unclassified'):
         self.id = id
         self.contest_id = contest_id
         self.problem = problem
         self.verdict = verdict
+        self.prog_lang = prog_lang
 
     def __init__(self, submission_json):
         """Creates a submission instance by parsing submission_json"""
@@ -25,6 +26,8 @@ class Submission:
             self.set_problem(Problem.Problem(submission_json['problem']));
         if 'verdict' in submission_json:
             self.set_verdict(submission_json['verdict'])
+        if 'programmingLanguage' in submission_json:
+            self.set_prog_lang(submission_json['programmingLanguage'])
 
     def set_id(self, id):
         self.id = id;
@@ -37,6 +40,9 @@ class Submission:
 
     def set_verdict(self, verdict):
         self.verdict = verdict
+
+    def set_prog_lang(self, prog_lang):
+        self.prog_lang = prog_lang
 
     def log(self):
         """Prints submissions details."""
