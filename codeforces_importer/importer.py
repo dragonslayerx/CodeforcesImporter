@@ -6,9 +6,9 @@ from codeforces_importer.classifier.classifier import Classifier
 from codeforces_importer.classifier import html_generator
 from submission_list_importer import SubmissionImport
 from cfi_ignore import CfiIgnore
+from get_extension import get_extension
 
-
-def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
+def import_codes(handle, dir_path='.\log\\', fetch_submission_flag=True, max_sub_lim=10000):
     """Calls modules to import user-submissions-list, extract source-code, adding problems to classifier and write to file.
 
     :param handle: user's handle whose submissions are to be imported
@@ -50,29 +50,32 @@ def import_codes(handle, dir_path='.\log\\', max_sub_lim=10000):
                     problem_id, problem_name = get_problem_details(submission)
 
                     # file path for cloned file
-                    file_name = get_file_name(problem_id, problem_name)
+                    file_name = get_file_name(problem_id, problem_name, submission.prog_lang)
                     absolute_path = os.path.join(dir_path, file_name)
                     relative_path = os.path.join('.//', file_name)
 
                     # adds problem to classifier
                     classifier.add(submission.problem, submission.id, relative_path)
 
-                    # check if the submission is pre-fetched
-                    if cfi_ignore.ignore(problem_id) is False and is_gym(problem_id) is False:
+                    # fetch_submission_flag = True if user desires to import submissions
+                    if fetch_submission_flag:
 
-                        # extracts the source code at the submission id
-                        code = source_code_extractor.extract_source_code(str(submission.contest_id), str(submission.id))
+                        # check if the submission is pre-fetched
+                        if cfi_ignore.ignore(problem_id) is False and is_gym(problem_id) is False:
 
-                        # writing submission to file
-                        file_io.write_to_file(absolute_path, code)
+                            # extracts the source code at the submission id
+                            code = source_code_extractor.extract_source_code(str(submission.contest_id), str(submission.id))
 
-                        # add problem to ignore-list so that it is not fetched next time
-                        cfi_ignore.add(problem_id)
+                            # writing submission to file
+                            file_io.write_to_file(absolute_path, code)
 
-                        print 'Successfully written submission: ' + str(submission.id) + ' to ' + absolute_path
+                            # add problem to ignore-list so that it is not fetched next time
+                            cfi_ignore.add(problem_id)
 
-                    else:
-                        print 'ignoring submission. cfiignore suggests it has been fetched earlier'
+                            print 'Successfully written submission: ' + str(submission.id) + ' to ' + absolute_path
+
+                        else:
+                            print 'ignoring submission. cfiignore suggests it has been fetched earlier'
 
                 # ignore any exception in parsing source_code
                 except Exception as ex:
@@ -120,11 +123,11 @@ def get_problem_details(submission):
     return problem_id, problem_name
 
 
-def get_file_name(problem_id, problem_name):
+def get_file_name(problem_id, problem_name, prog_lang):
     """Generate desired file_name for problem and returns it"""
 
     # path of local file where submission has to be saved
-    file_name = problem_id + '-' + problem_name + '.txt'
+    file_name = problem_id + '-' + problem_name + '.' + get_extension(prog_lang);
     return file_name
 
 
