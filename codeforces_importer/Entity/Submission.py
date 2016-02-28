@@ -8,11 +8,12 @@ class Submission:
     See http://codeforces.com/api/help/objects for more help.
     """
 
-    def __init__(self, id=None, contest_id=None, problem=None, verdict=None, submission_time=None, submission_time_components=None):
+    def __init__(self, id=None, contest_id=None, problem=None, verdict=None, prog_lang='unclassified', submission_time=None, submission_time_components=None):
         self.id = id
         self.contest_id = contest_id
         self.problem = problem
         self.verdict = verdict
+        self.prog_lang = prog_lang
         self.submission_time = submission_time
         self.submission_time_components = submission_time_components
 
@@ -27,9 +28,12 @@ class Submission:
             self.set_problem(Problem.Problem(submission_json['problem']));
         if 'verdict' in submission_json:
             self.set_verdict(submission_json['verdict'])
+        if 'programmingLanguage' in submission_json:
+            self.set_prog_lang(submission_json['programmingLanguage'])
         if 'creationTimeSeconds' in submission_json:
             self.set_submission_time(datetime.datetime.fromtimestamp(int(submission_json['creationTimeSeconds'])))
             self.set_submission_time_components(self.submission_time)
+
 
     def set_id(self, id):
         self.id = id;
@@ -43,11 +47,15 @@ class Submission:
     def set_verdict(self, verdict):
         self.verdict = verdict
 
+    def set_prog_lang(self, prog_lang):
+        self.prog_lang = prog_lang
+
     def set_submission_time(self, submission_time):
         self.submission_time = submission_time
 
     def set_submission_time_components(self, submission_time):
         self.submission_time_components = [submission_time.year, submission_time.month-1, submission_time.day]
+
 
     def log(self):
         """Prints submissions details."""

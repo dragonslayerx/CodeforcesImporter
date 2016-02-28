@@ -19,9 +19,13 @@ It also generates a HTML page that contain links to problems categorised accordi
 
 ## Usage  
 
-<code> python cfimport.py handle local_directory </code> 
+Usage: <code>  python cfimport.py [-i, --ignore] {handle} {directory_path} </code> 
 
-Example : <code> python cfimport.py dragonslayerx C:\\\\Users\\\\dragonslayerx\\\\Desktop\\\\log </code>
+Example : 
+
+<code> python cfimport.py dragonslayerx C:\\\\Users\\\\dragonslayerx\\\\Desktop\\\\log </code>
+
+<code> python cfimport.py --ignore dragonslayerx C:\\\\Users\\\\dragonslayerx\\\\Desktop\\\\log </code>
 
 Note: use python 2.7
 
