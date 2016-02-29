@@ -26,13 +26,10 @@
                     text: 'Codeforces'
                 },
                 xAxis: {
-                    type: 'date',
-                    dateTimeLabelFormats: { // don't display the dummy year
-                        month: '%e',
-                        year: '%Y'
-                    },
-                    title: {
-                        text: 'Date'
+                    tickInterval: 1,
+                    labels: {
+                        enabled: true,
+                        formatter: function() { return Highcharts.dateFormat('%d %b %y', this.value);},
                     }
                 },
                 yAxis: {
