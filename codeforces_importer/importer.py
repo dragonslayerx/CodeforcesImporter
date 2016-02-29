@@ -83,9 +83,21 @@ def import_codes(handle, dir_path='.\log\\', fetch_submission_flag=True, max_sub
 
                 print ''
 
+            # construct date vs count
+            date_vs_info = {}
+            for submission in submissions_list:
+                submission_date = submission.submission_time.strftime("%Y-%m-%d")
+                submission_data = date_vs_info.get(submission_date, [submission.submission_time_components, 0])
+                submission_data[1] += 1
+                date_vs_info[submission_date] = submission_data
+
+
             try:
                 # generates html file
-                html_generator.generate_html(handle, classifier, dir_path)
+                html_generator.generate_html(handle, classifier, dir_path, "classification")
+
+                # generates html file for data visualization
+                html_generator.generate_html(handle, classifier, dir_path, "visualization", date_vs_info.values())
 
                 # writes cfi ignore
                 cfi_ignore.write_ignore_list()

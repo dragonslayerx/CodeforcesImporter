@@ -17,10 +17,18 @@ def render_template(template_filename, context):
     return TEMPLATE_ENVIRONMENT.get_template(template_filename).render(context)
 
 
-def generate_html(handle, classifier, dir_path):
+def generate_html(handle, classifier, dir_path, output_type, submission_data=None):
     """Creates a html page for classified problems"""
     try:
-        output_html = os.path.join(dir_path, "classified-problems.html")
+        output_type_vs_output_file = {
+            "classification": "classified-problems.html",
+            "visualization": "visualization.html"
+        }
+        output_type_vs_template_file = {
+            "classification": "index.html",
+            "visualization": "submissions_visualization.html"
+        }
+        output_html = os.path.join(dir_path, output_type_vs_output_file[output_type])
         file_handle = os.open(output_html, WRITE_FLAGS)
 
         # python variables to be mapped with html page
@@ -37,12 +45,13 @@ def generate_html(handle, classifier, dir_path):
             'handle': handle,
             'handle_link': urlgen.generate_profile_url(handle),
             'category_counter': classifier.category_count,
-            'category_total_counter': classifier.category_total_count
+            'category_total_counter': classifier.category_total_count,
+            'submission_data': submission_data
         }
 
         # writes the html file to classified-problems.html
         with os.fdopen(file_handle, 'w') as output:
-            html = render_template('index.html', context)
+            html = render_template(output_type_vs_template_file[output_type], context)
             html = html.encode('utf-8')
             output.write(html)
 

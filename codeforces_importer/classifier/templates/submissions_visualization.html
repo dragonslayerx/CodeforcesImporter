@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Submissions Visualization</title>
+    <link href='https://fonts.googleapis.com/css?family=Catamaran:100' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div id="date-vs-count-graph" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script>
+       // graph code
+       $(function () {
+            $('#date-vs-count-graph').highcharts({
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: 'Codeforces'
+                },
+                xAxis: {
+                    tickInterval: 1,
+                    labels: {
+                        enabled: true,
+                        formatter: function() { return Highcharts.dateFormat('%d %b %y', this.value);},
+                    }
+                },
+                yAxis: {
+                    title: {
+                        text: 'Problems count'
+                    },
+                    min: 0
+                },
+                tooltip: {
+                    headerFormat: '<b>{series.name}</b><br>',
+                    pointFormat: '{point.x: %b %e - %Y}: {point.y}'
+                },
+
+                plotOptions: {
+                    spline: {
+                        marker: {
+                            enabled: true
+                        }
+                    }
+                },
+
+                series: [{
+                    name: 'Performance',
+                    // Define the data points. All series have a dummy year
+                    // of 1970/71 in order to be compared on the same x axis. Note
+                    // that in JavaScript, months start at 0 for January, 1 for February etc.
+                    data: [
+                        {% for submission in submission_data -%}
+                            [Date.UTC({{submission[0][0]}}, {{submission[0][1]}}, {{submission[0][2]}}), {{submission[1]}}],
+                        {%- endfor %}
+                    ]
+                }]
+            });
+        });
+    </script>
+</body>
+</html>
