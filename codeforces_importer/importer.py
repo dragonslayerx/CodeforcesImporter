@@ -1,5 +1,4 @@
-import os, sys
-import file_io
+import os, sys, file_io
 import source_code_extractor
 import problem_importer
 from codeforces_importer.classifier.classifier import Classifier
@@ -7,6 +6,7 @@ from codeforces_importer.classifier import html_generator
 from submission_list_importer import SubmissionImport
 from cfi_ignore import CfiIgnore
 from get_extension import get_extension
+
 
 def import_codes(handle, dir_path='.\log\\', fetch_submission_flag=True, max_sub_lim=10000):
     """Calls modules to import user-submissions-list, extract source-code, adding problems to classifier and write to file.
