@@ -9,46 +9,94 @@ class Classifier:
     Also keep submission-links and local-links mapped to problem-name.
     """
 
+    """Submission-wise categorization"""
+
     def __init__(self):
-        self.problem_list = set()
-        
-        self.problem_tags = defaultdict(set)
-        self.problem_id = {}
-        self.problem_link = {}
-        self.submission_link ={}
-        self.local_path_link ={}
-        self.category_count = defaultdict(int)
-        self.category_total_count = defaultdict(int)
 
-    def add(self, problem, submission_id, relative_path):
-        """Adds a problem and submission details to Classifier."""
+        self.problems = set()
+        self.submissions = set()
+        self.category_count = defaultdict(int);
 
-        # Checks if the submission is a resubmission over existing problem
-        if problem.name not in self.problem_id:
+    def add_submission(self, submission, relative_path):
+        """Adds submission details to Classifier."""
 
-            problem_url = urlgen.generate_problem_url(problem.contest_id, problem.index)
-            submission_url = urlgen.generate_submission_url(problem.contest_id, submission_id)
+        problem = submission.problem
+        submission_url = urlgen.generate_submission_url(problem.contest_id, submission.id)
 
-            self.problem_list.add(problem.name)
+        if submission not in self.submissions:
+            self.submissions.add((submission, submission_url, relative_path))
 
+    def get_submission_url(self):
+        submission_url = dict()
+        for submission_details in self.submissions:
+            submission = submission_details[0]
+            url = submission_details[1]
+            submission_url[submission.problem.name] = url
+        return submission_url
+
+    def get_tag_count(self):
+        tag_count = defaultdict(int)
+        for submission_details in self.submissions:
+            submission = submission_details[0]
+            problem = submission.problem
             # add to all the tags
             for tag in problem.tags:
-                self.problem_tags[tag].add(problem.name)
-                self.category_count[tag] += 1
+                tag_count[tag] += 1
+        return tag_count
 
-            self.problem_id[problem.name] = str(problem.contest_id) + '-' + problem.index
-            self.problem_link[problem.name] = problem_url
-            self.submission_link[problem.name] = submission_url
-            self.local_path_link[problem.name] = relative_path
+    def get_local_link(self):
+        local_link = dict()
+        for submission_details in self.submissions:
+            submission = submission_details[0]
+            link = submission_details[2]
+            local_link[submission.problem.name] = link
+        return local_link
 
-    def add_problem_tag(self, problem, tag):
-        """Adds problem to category and increment category count by 1"""
+    """Problem-wise categorization"""
 
-        self.category_total_count[tag] += 1;
+    def add_problem(self, problem):
+        """Adds problem to category."""
+
+        problem_url = urlgen.generate_problem_url(problem.contest_id, problem.index)
+        self.problems.add((problem, problem_url))
+
+        for tag in problem.tags:
+            self.category_count[tag] += 1
+
+    def get_problem_list(self):
+        problem_list = set()
+        for problem_details in self.problems:
+            problem = problem_details[0]
+            problem_list.add(problem.name)
+        return problem_list
+
+    def get_problem_id(self):
+        problem_id = dict()
+        for problem_details in self.problems:
+            problem = problem_details[0]
+            problem_id[problem.name] = str(problem.contest_id) + '-' + problem.index
+        return problem_id
+
+    def get_problem_url(self):
+        problem_url = dict()
+        for problem_details in self.problems:
+            problem = problem_details[0]
+            problem_url[problem.name] = problem_details[1]
+        return problem_url
+
+    def get_tagged_problems(self):
+        problem_tags = defaultdict(set)
+        for submission_details in self.submissions:
+            submission = submission_details[0]
+            problem = submission.problem
+            # add to all the tags
+            for tag in problem.tags:
+                problem_tags[tag].add(problem.name)
+        return problem_tags
 
     def get_sorted_category(self):
         sorted_category_list = []
-        for category in self.problem_tags:
+        for category in self.category_count:
             sorted_category_list.append(category)
         sorted_category_list.sort()
         return sorted_category_list

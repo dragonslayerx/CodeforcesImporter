@@ -34,18 +34,18 @@ def generate_html(handle, classifier, dir_path, output_type, submission_data=Non
         # python variables to be mapped with html page
         # see jinja2 library documentation for more help
         context = {
-            'names': classifier.problem_list,
-            'links': classifier.problem_link,
+            'names': classifier.get_problem_list(),
+            'links': classifier.get_problem_url(),
             'sorted_category': classifier.get_sorted_category(),
-            'category': classifier.problem_tags,
-            'submission': classifier.submission_link,
-            'local': classifier.local_path_link,
-            'index': classifier.problem_id,
-            'submission_count': len(classifier.problem_list),
+            'category': classifier.get_tagged_problems(),
+            'submission': classifier.get_submission_url(),
+            'local': classifier.get_local_link(),
+            'index': classifier.get_problem_id(),
+            'submission_count': len(classifier.get_submission_url()),
             'handle': handle,
             'handle_link': urlgen.generate_profile_url(handle),
-            'category_counter': classifier.category_count,
-            'category_total_counter': classifier.category_total_count,
+            'category_counter': classifier.get_tag_count(),
+            'category_total_counter': classifier.category_count,
             'submission_data': submission_data
         }
 

@@ -6,6 +6,7 @@ from codeforces_importer.classifier import html_generator
 from submission_list_importer import SubmissionImport
 from cfi_ignore import CfiIgnore
 from get_extension import get_extension
+from codeforces_importer.Entity.Problem import Problem
 
 
 def import_codes(handle, dir_path='.\log\\', fetch_submission_flag=True, max_sub_lim=10000):
@@ -33,9 +34,9 @@ def import_codes(handle, dir_path='.\log\\', fetch_submission_flag=True, max_sub
 
             # fetch problems from Codeforces API
             problem_list = problem_importer.fetch_problems_by_category()
-            for problem in problem_list:
-                for tag in problem['tags']:
-                    classifier.add_problem_tag(problem, tag)
+            for problem_json in problem_list:
+                problem = Problem(problem_json)
+                classifier.add_problem(problem)
 
             # ensures directory creation
             ensure_dir_creation(dir_path)
@@ -55,7 +56,7 @@ def import_codes(handle, dir_path='.\log\\', fetch_submission_flag=True, max_sub
                     relative_path = os.path.join('.//', file_name)
 
                     # adds problem to classifier
-                    classifier.add(submission.problem, submission.id, relative_path)
+                    classifier.add_submission(submission, relative_path)
 
                     # fetch_submission_flag = True if user desires to import submissions
                     if fetch_submission_flag:
