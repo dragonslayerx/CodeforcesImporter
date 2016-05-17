@@ -34,7 +34,6 @@ class Submission:
             self.set_submission_time(datetime.datetime.fromtimestamp(int(submission_json['creationTimeSeconds'])))
             self.set_submission_time_components(self.submission_time)
 
-
     def set_id(self, id):
         self.id = id;
 

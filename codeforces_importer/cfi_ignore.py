@@ -35,7 +35,6 @@ class CfiIgnore:
             file_path = path.join(self.dir_path, self.CFI_IGNORE_FILENAME)
             with open(file_path, 'r') as ignore_file:
                 content = str(ignore_file.read())
-                print content
                 self.ignore_list = content.split(';')
         except (OSError, IOError) as ex:
             pass

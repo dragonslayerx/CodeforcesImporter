@@ -44,8 +44,8 @@ def generate_html(handle, classifier, dir_path, output_type, submission_data=Non
             'submission_count': len(classifier.get_submission_url()),
             'handle': handle,
             'handle_link': urlgen.generate_profile_url(handle),
-            'category_counter': classifier.get_tag_count(),
-            'category_total_counter': classifier.category_count,
+            'category_counter': classifier.get_submission_tag_count(),
+            'category_total_counter': classifier.get_category_count(),
             'submission_data': submission_data
         }
 
