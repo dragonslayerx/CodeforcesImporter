@@ -1,6 +1,7 @@
 import httprequest
 import urlgen
 from lxml import html
+from exception import RequestFailureException
 
 
 def extract_source_code(contest_id, submission_id):
@@ -19,22 +20,25 @@ def extract_source_code(contest_id, submission_id):
     print submission_url
 
     # makes a request to Codeforces API for users' submissions list
-    response = httprequest.send_get_request(submission_url)
-
-    # parses html at codeforces.com/contest/contest_id/submission/submission_id to extract source_code
-    tree2 = html.fromstring(response.text)
-    code = tree2.xpath('//*[@id="pageContent"]/div[3]/pre/text()')
-
     try:
-        if len(code) > 0:
-            # replaces all '\\r\\n' with '\r\n'
-            return fix_eol(code[0])
-        else:
-            # received empty content. unable to extract submission using html parser
-            raise ValueError('Empty Content')
-
-    except ValueError as ex:
+        response = httprequest.send_get_request(submission_url)
+    except RequestFailureException as ex:
         print ex.message
+    else:
+        # parses html at codeforces.com/contest/contest_id/submission/submission_id to extract source_code
+        tree2 = html.fromstring(response.text)
+        code = tree2.xpath('//*[@id="pageContent"]/div[3]/pre/text()')
+
+        try:
+            if len(code) > 0:
+                # replaces all '\\r\\n' with '\r\n'
+                return fix_eol(code[0])
+            else:
+                # received empty content. unable to extract submission using html parser
+                raise ValueError('Empty Content')
+
+        except ValueError as ex:
+            print ex.message
 
 
 def fix_eol(code):

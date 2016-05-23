@@ -1,5 +1,6 @@
-import requests;
+import requests
 import sys
+from exception import RequestFailureException
 
 
 def send_get_request(url):
@@ -12,12 +13,9 @@ def send_get_request(url):
         response = requests.get(url)
         return response
     except requests.exceptions.Timeout:
-        print 'Connection Timed Out'
-        sys.exit(1)
+        raise RequestFailureException('Connection Timed Out')
     except requests.exceptions.TooManyRedirects:
-        print 'Too Many redirects'
-        sys.exit(1)
+        raise RequestFailureException('Too Many Redirects')
     except requests.exceptions.RequestException:
-        print 'Unable to connect.'
-        sys.exit(1)
+        raise RequestFailureException('Unable To connect')
 
