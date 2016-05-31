@@ -35,17 +35,25 @@ class SubmissionImport:
         """Sends request at Codeforces.API_URL/user.status to fetch submission list and returns the response json """
 
         url = self.generate_url()
-        response = httprequest.send_get_request(url);
-
-        if 'status' in response.json():
-            # status == OK, if request succeeds
-            if response.json()['status'] == 'OK':
-                print 'Connection Status: Successful'
-                return response.json()
-            else:
-                raise RequestFailureException('Request Failed');
+        try:
+            response = httprequest.send_get_request(url);
+        except RequestFailureException as ex:
+            print ex.message
+            sys.exit(1)
         else:
-            raise RequestFailureException('Request Failed');
+            if 'status' in response.json():
+                # status == OK, if request succeeds
+                if response.json()['status'] == 'OK':
+                    print 'Connection Status: Successful'
+                    return response.json()
+                else:
+                    if 'comment' in response.json():
+                        # prints why request failed
+                        raise RequestFailureException(response.json()['comment'])
+                    else:
+                        raise RequestFailureException('Request Failed')
+            else:
+                raise RequestFailureException('Request Failed')
 
     @staticmethod
     def parse(submission_json):
@@ -63,12 +71,8 @@ class SubmissionImport:
         try:
             response = self.import_submissions()
         except RequestFailureException as ex:
-            if 'comment' in response:
-                # prints why request failed
-                print response['comment']
-            else:
-                # request failed due to unknown reason
-                print ex.message
+            # request failed due to unknown reason
+            print ex.message
             sys.exit(1)
         else:
             # parsing json response.result for submission information
