@@ -47,7 +47,11 @@ class SubmissionImport:
                     print 'Connection Status: Successful'
                     return response.json()
                 else:
-                    raise RequestFailureException('Request Failed')
+                    if 'comment' in response.json():
+                        # prints why request failed
+                        raise RequestFailureException(response.json()['comment'])
+                    else:
+                        raise RequestFailureException('Request Failed')
             else:
                 raise RequestFailureException('Request Failed')
 
@@ -67,12 +71,8 @@ class SubmissionImport:
         try:
             response = self.import_submissions()
         except RequestFailureException as ex:
-            if 'comment' in response:
-                # prints why request failed
-                print response['comment']
-            else:
-                # request failed due to unknown reason
-                print ex.message
+            # request failed due to unknown reason
+            print ex.message
             sys.exit(1)
         else:
             # parsing json response.result for submission information
