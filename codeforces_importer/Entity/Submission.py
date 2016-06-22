@@ -55,7 +55,6 @@ class Submission:
     def set_submission_time_components(self, submission_time):
         self.submission_time_components = [submission_time.year, submission_time.month-1, submission_time.day]
 
-
     def log(self):
         """Prints submissions details."""
 

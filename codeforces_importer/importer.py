@@ -1,12 +1,15 @@
-import os, sys, file_io
-import source_code_extractor
+import os
+import sys
+
 import problem_importer
-from codeforces_importer.classifier.classifier import Classifier
-from codeforces_importer.classifier import html_generator
-from submission_list_importer import SubmissionImport
+import source_code_extractor
 from cfi_ignore import CfiIgnore
-from get_extension import get_extension
 from codeforces_importer.Entity.Problem import Problem
+from codeforces_importer.classifier import html_generator
+from codeforces_importer.classifier.classifier import Classifier
+from codeforces_importer.util import file_io
+from get_extension import get_extension
+from submission_list_importer import SubmissionImport
 
 
 def import_codes(handle, dir_path='.\log\\', fetch_submission_flag=True, max_sub_lim=10000):

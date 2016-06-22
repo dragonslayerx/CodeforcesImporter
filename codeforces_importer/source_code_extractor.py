@@ -1,6 +1,7 @@
-import httprequest
-import urlgen
 from lxml import html
+
+import urlgen
+from codeforces_importer.util import httprequest
 from exception import RequestFailureException
 
 

@@ -1,6 +1,8 @@
 import sys
-import httprequest
-from urlbuilder import Urlbuilder
+
+from util import httprequest
+
+from codeforces_importer.util.urlbuilder import Urlbuilder
 from config import Codeforces
 from config import PublicMethods
 from exception import RequestFailureException

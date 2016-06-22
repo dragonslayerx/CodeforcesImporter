@@ -1,10 +1,12 @@
 import sys
-from urlbuilder import Urlbuilder
+
+from util import httprequest
+
+from Entity.Submission import Submission
+from codeforces_importer.util.urlbuilder import Urlbuilder
 from config import Codeforces
 from config import UserRequestMethod
-from Entity.Submission import Submission
 from exception import RequestFailureException
-import httprequest
 
 
 class SubmissionImport:
